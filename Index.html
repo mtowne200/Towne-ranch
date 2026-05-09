@@ -159,7 +159,7 @@ textarea{resize:vertical;min-height:60px}
 <div class="hdr">
   <div class="hdr-row">
     <div class="brand">&#10013; <span>Towne</span> Ranch</div>
-    <div class="hdr-r"><div class="sdot"></div><span style="font-size:10px;color:#C9956A">Local</span><span style="font-size:10px;color:#8B5E3C;margin-left:4px" id="hdate"></span></div>
+    <div class="hdr-r"><div class="sdot"></div><span style="font-size:10px;color:#C9956A">Local</span><span style="font-size:10px;color:#8B5E3C;margin-left:4px" id="hdate"></span><button onclick="openBackup()" style="background:transparent;border:none;color:#8B5E3C;font-size:16px;cursor:pointer;padding:0 0 0 8px;line-height:1" title="Backup &amp; Restore">&#9881;</button></div>
   </div>
 </div>
 <div class="nav" id="nav"></div>
@@ -382,6 +382,17 @@ textarea{resize:vertical;min-height:60px}
 <div class="fg"><label>Annual Growth Rate %</label><input type="number" id="gl-growth" placeholder="15" step="1"></div>
 <div class="fg"><label>Notes (e.g. salary to replace)</label><input id="gl-notes" placeholder="Replace salary of $X/mo..."></div>
 <div class="g2" style="margin-top:8px"><button class="btn bo" onclick="closeM('m-goals')">Cancel</button><button class="btn bp" onclick="saveGoals()">Save</button></div>
+</div></div>
+<!-- BACKUP / RESTORE -->
+<div class="mo" id="m-backup"><div class="mb">
+<div class="mt">Backup &amp; Restore</div>
+<p style="font-size:12px;color:#C9956A;margin-bottom:14px">Export all ranch data as a JSON file, or restore from a previous backup.</p>
+<button class="btn bp" onclick="doBackup()" style="margin-bottom:14px">&#8659; Export Backup</button>
+<div style="border-top:1px solid rgba(201,149,106,.2);padding-top:14px">
+<div class="fg"><label>Restore from Backup File</label><input type="file" id="bk-file" accept=".json,application/json"></div>
+<p style="font-size:10px;color:#E88A6A;margin-bottom:10px">Warning: restoring will replace all current data.</p>
+<div class="g2"><button class="btn bo" onclick="closeM('m-backup')">Cancel</button><button class="btn bd" onclick="doRestore()">Restore</button></div>
+</div>
 </div></div>
 
 <script>
@@ -753,6 +764,34 @@ function doFinExport(){
   else if(fmt==="csv"){var rows2=costs.map(function(c2){return[(c2.date||""),'"'+esc(c2.desc)+'"',(c2.schedF||""),c2.type,c2.amount.toFixed(2)].join(",");});dlFile(["Date,Description,Category,Type,Amount"].concat(rows2).join("\n"),"finance-"+label.replace(/[^a-z0-9]/gi,"-")+".csv","text/csv");}
   else{var ct="TOWNE RANCH - FINANCE\nPeriod: "+label+"\n";for(i=0;i<sfKeys.length;i++){ct+=sfKeys[i]+": "+money(sf[sfKeys[i]])+"\n";}ct+="\n";for(i=0;i<costs.length;i++){ct+=(costs[i].date||"")+" "+(costs[i].type==="income"?"+":"-")+money(costs[i].amount)+" "+costs[i].desc+"\n";}dlFile(ct,"finance.txt","text/plain");}
   closeM("m-fexport");
+}
+
+// ── BACKUP / RESTORE ──
+function openBackup(){
+  var f=el("bk-file");if(f)f.value="";
+  openM("m-backup");
+}
+function doBackup(){
+  var ts=new Date().toISOString().slice(0,10);
+  dlFile(JSON.stringify(D,null,2),"towne-ranch-backup-"+ts+".json","application/json");
+}
+function doRestore(){
+  var f=el("bk-file");
+  if(!f||!f.files||!f.files.length){alert("Select a backup file first.");return;}
+  var reader=new FileReader();
+  reader.onload=function(ev){
+    var data;
+    try{data=JSON.parse(ev.target.result);}catch(x){alert("Invalid JSON file.");return;}
+    if(!data||typeof data!=="object"||!data.animals){alert("This does not look like a Towne Ranch backup.");return;}
+    if(!confirm("Replace ALL current ranch data with this backup?\n\nThis cannot be undone."))return;
+    D=data;
+    ensureArrays();
+    saveData();
+    closeM("m-backup");
+    renderTab(curTab);
+    alert("Restore complete.");
+  };
+  reader.readAsText(f.files[0]);
 }
 
 // ── ALERTS ──
