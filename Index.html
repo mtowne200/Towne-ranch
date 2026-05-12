@@ -9,25 +9,25 @@
 <title>Towne Ranch</title>
 <style>
 
-:root{--soil:#101824;--bark:#182438;--bark2:#1E2E45;--leather:#4A6888;--tan:#80A8C8;--straw:#E8C87A;--cream:#F5EDD8;--sky:#5B8FA8;--grass:#4A7C59;--rust:#B84C2B;--gold:#D4A032;--r:#E88A6A;--g:#7EC89A}
+:root{--soil:#060C16;--bark:#0C1A2C;--bark2:#112038;--leather:#607898;--tan:#9ABCDA;--straw:#E8C87A;--cream:#F5EDD8;--sky:#5B8FA8;--grass:#4A7C59;--rust:#B84C2B;--gold:#D4A032;--r:#E88A6A;--g:#7EC89A}
 *{-webkit-box-sizing:border-box;box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
 html,body{width:100%;height:100%}
-body{font-family:Georgia,serif;background:#101824;color:#F5EDD8;display:-webkit-box;display:-webkit-flex;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-webkit-flex-direction:column;flex-direction:column;max-width:480px;margin:0 auto}
-.hdr{background:linear-gradient(175deg,#1E2E45,#182438);border-bottom:2px solid #D4A032;padding:10px 14px 8px;-webkit-flex-shrink:0;flex-shrink:0;box-shadow:0 2px 14px rgba(0,0,0,.35)}
+body{font-family:Georgia,serif;background:#060C16;color:#F5EDD8;display:-webkit-box;display:-webkit-flex;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-webkit-flex-direction:column;flex-direction:column;max-width:480px;margin:0 auto}
+.hdr{background:linear-gradient(175deg,#112038,#0C1A2C);border-bottom:2px solid #D4A032;padding:10px 14px 8px;-webkit-flex-shrink:0;flex-shrink:0;box-shadow:0 2px 14px rgba(0,0,0,.35)}
 .hdr-row{display:-webkit-box;display:-webkit-flex;display:flex;-webkit-box-align:center;-webkit-align-items:center;align-items:center;-webkit-box-pack:justify;-webkit-justify-content:space-between;justify-content:space-between}
 .brand{font-size:18px;font-weight:900;color:#E8C87A;letter-spacing:1px}
 .brand span{color:#D4A032}
 .hdr-r{display:-webkit-box;display:-webkit-flex;display:flex;-webkit-box-align:center;-webkit-align-items:center;align-items:center;gap:6px}
 .sdot{width:8px;height:8px;border-radius:50%;background:#4A7C59;-webkit-flex-shrink:0;flex-shrink:0}
-.nav{display:-webkit-box;display:-webkit-flex;display:flex;background:#101824;border-bottom:2px solid #182438;-webkit-flex-shrink:0;flex-shrink:0;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+.nav{display:-webkit-box;display:-webkit-flex;display:flex;background:#060C16;border-bottom:2px solid #0C1A2C;-webkit-flex-shrink:0;flex-shrink:0;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none}
 .nav::-webkit-scrollbar{display:none}
-.nt{-webkit-box-flex:0;-webkit-flex:0 0 auto;flex:0 0 auto;padding:8px 9px 6px;text-align:center;cursor:pointer;font-size:9px;font-weight:700;color:#4A6888;text-transform:uppercase;border-bottom:3px solid transparent;white-space:nowrap}
+.nt{-webkit-box-flex:0;-webkit-flex:0 0 auto;flex:0 0 auto;padding:8px 9px 6px;text-align:center;cursor:pointer;font-size:9px;font-weight:700;color:#607898;text-transform:uppercase;border-bottom:3px solid transparent;white-space:nowrap}
 .nt .i{font-size:14px;display:block;margin-bottom:2px}
 .nt.on{color:#E8C87A;border-bottom-color:#D4A032;background:rgba(212,160,50,.07)}
 .pages{-webkit-box-flex:1;-webkit-flex:1;flex:1;overflow:hidden;position:relative;min-height:0}
 .pg{display:none;position:absolute;top:0;left:0;right:0;bottom:0;overflow-y:auto;-webkit-overflow-scrolling:touch;padding:13px 13px 80px}
 .pg.on{display:block}
-.card{background:#1E2E45;border-radius:12px;padding:13px;margin-bottom:10px;border:1px solid rgba(201,149,106,.2);box-shadow:0 2px 14px rgba(0,0,0,.25)}
+.card{background:#112038;border-radius:12px;padding:13px;margin-bottom:10px;border:1px solid rgba(201,149,106,.2);box-shadow:0 2px 14px rgba(0,0,0,.25)}
 .ch{display:-webkit-box;display:-webkit-flex;display:flex;-webkit-box-align:center;-webkit-align-items:center;align-items:center;-webkit-box-pack:justify;-webkit-justify-content:space-between;justify-content:space-between;margin-bottom:9px}
 .ct{font-size:14px;color:#E8C87A;font-weight:700}
 .b{font-size:10px;padding:2px 7px;border-radius:20px;font-weight:700;white-space:nowrap}
@@ -42,12 +42,12 @@ body{font-family:Georgia,serif;background:#101824;color:#F5EDD8;display:-webkit-
 .sg4 .sb{-webkit-box-flex:1;-webkit-flex:1;flex:1}
 .sg3{display:-webkit-box;display:-webkit-flex;display:flex;gap:7px;margin-bottom:10px}
 .sg3 .sb{-webkit-box-flex:1;-webkit-flex:1;flex:1}
-.sb{background:linear-gradient(150deg,#1E2E45,#162235);border-radius:10px;padding:9px 4px;border:1px solid rgba(201,149,106,.18);text-align:center;box-shadow:0 2px 8px rgba(0,0,0,.2)}
+.sb{background:linear-gradient(150deg,#112038,#091828);border-radius:10px;padding:9px 4px;border:1px solid rgba(201,149,106,.18);text-align:center;box-shadow:0 2px 8px rgba(0,0,0,.2)}
 .sv{font-size:16px;font-weight:700;color:#E8C87A}
-.slb{font-size:9px;color:#80A8C8;text-transform:uppercase;margin-top:2px}
+.slb{font-size:9px;color:#9ABCDA;text-transform:uppercase;margin-top:2px}
 .fg{margin-bottom:10px}
-label{display:block;font-size:11px;text-transform:uppercase;letter-spacing:.5px;color:#80A8C8;margin-bottom:4px;font-weight:700}
-input,select,textarea{width:100%;background:#101824;border:1px solid rgba(201,149,106,.3);border-radius:6px;color:#F5EDD8;padding:9px 10px;font-family:Georgia,serif;font-size:14px;outline:none;-webkit-appearance:none;appearance:none}
+label{display:block;font-size:11px;text-transform:uppercase;letter-spacing:.5px;color:#9ABCDA;margin-bottom:4px;font-weight:700}
+input,select,textarea{width:100%;background:#060C16;border:1px solid rgba(201,149,106,.3);border-radius:6px;color:#F5EDD8;padding:9px 10px;font-family:Georgia,serif;font-size:14px;outline:none;-webkit-appearance:none;appearance:none}
 select{background-image:none}
 textarea{resize:vertical;min-height:60px}
 .g2{display:-webkit-box;display:-webkit-flex;display:flex;gap:9px}
@@ -56,17 +56,17 @@ textarea{resize:vertical;min-height:60px}
 .g3>*{-webkit-box-flex:1;-webkit-flex:1;flex:1;min-width:0}
 .btn{display:inline-block;padding:9px 15px;border-radius:8px;font-family:Georgia,serif;font-size:13px;font-weight:700;cursor:pointer;border:none;text-align:center;width:100%;-webkit-appearance:none;-webkit-transition:-webkit-transform .12s,opacity .12s,box-shadow .12s;transition:transform .12s,opacity .12s,box-shadow .12s}
 .btn:active{-webkit-transform:scale(.96);transform:scale(.96);opacity:.85}
-.bp{background:linear-gradient(135deg,#E0AA28,#C09020);color:#101824;box-shadow:0 2px 10px rgba(212,160,50,.3)}
+.bp{background:linear-gradient(135deg,#E0AA28,#C09020);color:#060C16;box-shadow:0 2px 10px rgba(212,160,50,.3)}
 .bd{background:transparent;color:#E88A6A;border:1px solid #B84C2B}
-.bo{background:transparent;color:#80A8C8;border:1px solid rgba(201,149,106,.3);width:auto}
+.bo{background:transparent;color:#9ABCDA;border:1px solid rgba(201,149,106,.3);width:auto}
 .bg2{background:rgba(74,124,89,.2);color:#7EC89A;border:1px solid #4A7C59}
 .bsm{padding:6px 10px;font-size:11px;width:auto}
 .bxs{padding:4px 8px;font-size:10px;width:auto}
-.fab{position:fixed;bottom:22px;right:18px;width:54px;height:54px;border-radius:50%;background:linear-gradient(135deg,#E0AA28,#C09020);color:#101824;font-size:26px;border:none;cursor:pointer;box-shadow:0 4px 20px rgba(212,160,50,.45),0 2px 8px rgba(0,0,0,.35);display:none;-webkit-box-align:center;-webkit-align-items:center;align-items:center;-webkit-box-pack:center;-webkit-justify-content:center;justify-content:center;z-index:60;line-height:54px;text-align:center;-webkit-transition:-webkit-transform .12s;transition:transform .12s}
+.fab{position:fixed;bottom:22px;right:18px;width:54px;height:54px;border-radius:50%;background:linear-gradient(135deg,#E0AA28,#C09020);color:#060C16;font-size:26px;border:none;cursor:pointer;box-shadow:0 4px 20px rgba(212,160,50,.45),0 2px 8px rgba(0,0,0,.35);display:none;-webkit-box-align:center;-webkit-align-items:center;align-items:center;-webkit-box-pack:center;-webkit-justify-content:center;justify-content:center;z-index:60;line-height:54px;text-align:center;-webkit-transition:-webkit-transform .12s;transition:transform .12s}
 .fab.show{display:block}
 .mo{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,.75);z-index:300;-webkit-box-align:end;-webkit-align-items:flex-end;align-items:flex-end;-webkit-backdrop-filter:blur(2px);backdrop-filter:blur(2px)}
 .mo.open{display:-webkit-box;display:-webkit-flex;display:flex}
-.mb{background:linear-gradient(175deg,#1E3A55,#182438);border-radius:20px 20px 0 0;padding:8px 13px 30px;width:100%;max-width:480px;margin:0 auto;max-height:92vh;overflow-y:auto;-webkit-overflow-scrolling:touch;border-top:2px solid rgba(212,160,50,.5);box-shadow:0 -4px 30px rgba(0,0,0,.4)}
+.mb{background:linear-gradient(175deg,#142E48,#0C1A2C);border-radius:20px 20px 0 0;padding:8px 13px 30px;width:100%;max-width:480px;margin:0 auto;max-height:92vh;overflow-y:auto;-webkit-overflow-scrolling:touch;border-top:2px solid rgba(212,160,50,.5);box-shadow:0 -4px 30px rgba(0,0,0,.4)}
 .mb:before{content:"";display:block;width:36px;height:4px;background:rgba(201,149,106,.35);border-radius:2px;margin:0 auto 14px}
 .mt{font-size:17px;color:#E8C87A;margin-bottom:13px;font-weight:700}
 .li{display:-webkit-box;display:-webkit-flex;display:flex;-webkit-box-align:center;-webkit-align-items:center;align-items:center;gap:8px;padding:8px 0;border-bottom:1px solid rgba(201,149,106,.09);cursor:pointer}
@@ -74,23 +74,23 @@ textarea{resize:vertical;min-height:60px}
 .le{font-size:20px;width:32px;text-align:center;-webkit-flex-shrink:0;flex-shrink:0}
 .lm{-webkit-box-flex:1;-webkit-flex:1;flex:1;min-width:0}
 .ln{font-weight:700;font-size:13px;color:#F5EDD8;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
-.ls{font-size:10px;color:#80A8C8;margin-top:1px}
+.ls{font-size:10px;color:#9ABCDA;margin-top:1px}
 .lr{text-align:right;-webkit-flex-shrink:0;flex-shrink:0}
 .ci{display:-webkit-box;display:-webkit-flex;display:flex;-webkit-box-pack:justify;-webkit-justify-content:space-between;justify-content:space-between;-webkit-box-align:start;-webkit-align-items:flex-start;align-items:flex-start;padding:8px 0;border-bottom:1px solid rgba(201,149,106,.08);cursor:pointer}
 .ci:last-child{border-bottom:none}
 .cd{font-size:12px;color:#F5EDD8}
-.cc{font-size:10px;color:#80A8C8;margin-top:2px}
+.cc{font-size:10px;color:#9ABCDA;margin-top:2px}
 .ca{font-size:13px;font-weight:700;color:#E88A6A;white-space:nowrap;margin-left:8px}
 .ca.inc{color:#7EC89A}
 .chips{display:-webkit-box;display:-webkit-flex;display:flex;gap:5px;-webkit-flex-wrap:wrap;flex-wrap:wrap;margin-bottom:10px}
-.chip{padding:4px 10px;border-radius:20px;font-size:10px;font-weight:700;cursor:pointer;border:1px solid rgba(201,149,106,.25);color:#80A8C8;background:transparent;white-space:nowrap}
-.chip.on{background:#D4A032;color:#101824;border-color:#D4A032}
+.chip{padding:4px 10px;border-radius:20px;font-size:10px;font-weight:700;cursor:pointer;border:1px solid rgba(201,149,106,.25);color:#9ABCDA;background:transparent;white-space:nowrap}
+.chip.on{background:#D4A032;color:#060C16;border-color:#D4A032}
 .pb{height:5px;background:rgba(201,149,106,.15);border-radius:3px;overflow:hidden;margin-top:4px}
 .pf{height:100%;border-radius:3px}
-.sl2{font-size:10px;text-transform:uppercase;letter-spacing:1px;color:#4A6888;font-weight:700;margin-bottom:6px}
-.banner{background:#182438;border:1px solid #D4A032;border-radius:8px;padding:12px;margin-bottom:11px;display:-webkit-box;display:-webkit-flex;display:flex;-webkit-box-pack:justify;-webkit-justify-content:space-between;justify-content:space-between;-webkit-box-align:center;-webkit-align-items:center;align-items:center}
+.sl2{font-size:10px;text-transform:uppercase;letter-spacing:1px;color:#607898;font-weight:700;margin-bottom:6px}
+.banner{background:#0C1A2C;border:1px solid #D4A032;border-radius:8px;padding:12px;margin-bottom:11px;display:-webkit-box;display:-webkit-flex;display:flex;-webkit-box-pack:justify;-webkit-justify-content:space-between;justify-content:space-between;-webkit-box-align:center;-webkit-align-items:center;align-items:center}
 .pos{color:#7EC89A}.neg{color:#E88A6A}
-.empty{text-align:center;padding:32px 20px;color:#4A6888}
+.empty{text-align:center;padding:32px 20px;color:#607898}
 .empty .ei{font-size:34px;margin-bottom:8px}
 .empty .et{font-size:12px}
 .ast{border-radius:6px;padding:8px 10px;margin-bottom:7px;font-size:12px;background:rgba(184,76,43,.15);border:1px solid #B84C2B}
@@ -98,7 +98,7 @@ textarea{resize:vertical;min-height:60px}
 .ast.info{background:rgba(91,143,168,.12);border-color:#5B8FA8}
 .ast.ok{background:rgba(74,124,89,.12);border-color:#4A7C59}
 .ast.pur{background:rgba(144,96,192,.12);border-color:#9060C0}
-.spin{text-align:center;padding:24px;color:#4A6888;font-size:12px}
+.spin{text-align:center;padding:24px;color:#607898;font-size:12px}
 .mrow{display:-webkit-box;display:-webkit-flex;display:flex;-webkit-box-pack:justify;-webkit-justify-content:space-between;justify-content:space-between;-webkit-box-align:center;-webkit-align-items:center;align-items:center;padding:8px 0;border-bottom:1px solid rgba(201,149,106,.08)}
 .mrow:last-child{border-bottom:none}
 .sc{border-radius:8px;padding:10px;margin-bottom:7px;border:1px solid}
@@ -109,7 +109,7 @@ textarea{resize:vertical;min-height:60px}
 .nr:last-child{border-bottom:none}
 .citem{display:-webkit-box;display:-webkit-flex;display:flex;-webkit-box-align:center;-webkit-align-items:center;align-items:center;gap:10px;padding:9px 0;border-bottom:1px solid rgba(201,149,106,.09)}
 .citem:last-child{border-bottom:none}
-.cav{width:34px;height:34px;border-radius:50%;background:#182438;display:-webkit-box;display:-webkit-flex;display:flex;-webkit-box-align:center;-webkit-align-items:center;align-items:center;-webkit-box-pack:center;-webkit-justify-content:center;justify-content:center;font-size:15px;-webkit-flex-shrink:0;flex-shrink:0}
+.cav{width:34px;height:34px;border-radius:50%;background:#0C1A2C;display:-webkit-box;display:-webkit-flex;display:flex;-webkit-box-align:center;-webkit-align-items:center;align-items:center;-webkit-box-pack:center;-webkit-justify-content:center;justify-content:center;font-size:15px;-webkit-flex-shrink:0;flex-shrink:0}
 .litem{padding:8px 0;border-bottom:1px solid rgba(201,149,106,.08);cursor:pointer}
 .litem:last-child{border-bottom:none}
 .pgrid{display:-webkit-box;display:-webkit-flex;display:flex;-webkit-flex-wrap:wrap;flex-wrap:wrap;gap:6px;margin-top:8px}
@@ -118,11 +118,11 @@ textarea{resize:vertical;min-height:60px}
 .pthumb{width:100%;aspect-ratio:1 / 1;object-fit:cover;border-radius:6px;border:1px solid rgba(201,149,106,.2);display:block}
 .pdel{position:absolute;top:3px;right:3px;width:22px;height:22px;border-radius:50%;background:rgba(184,76,43,.9);color:#fff;border:none;font-size:12px;cursor:pointer;line-height:22px;text-align:center;padding:0}
 .padd{width:100%;padding-bottom:100%;border-radius:6px;border:2px dashed rgba(201,149,106,.3);cursor:pointer;position:relative;background:rgba(201,149,106,.05)}
-.padd-inner{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);-webkit-transform:translate(-50%,-50%);text-align:center;font-size:20px;color:#4A6888}
+.padd-inner{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);-webkit-transform:translate(-50%,-50%);text-align:center;font-size:20px;color:#607898}
 .ditem{display:-webkit-box;display:-webkit-flex;display:flex;-webkit-box-align:center;-webkit-align-items:center;align-items:center;gap:8px;padding:6px 0;border-bottom:1px solid rgba(201,149,106,.08);font-size:12px}
 .ditem:last-child{border-bottom:none}
 .ddel{background:transparent;border:none;color:#B84C2B;font-size:16px;cursor:pointer;padding:0 4px;width:auto}
-.en{font-size:10px;color:#4A6888;font-style:italic;margin-top:2px;line-height:1.4}
+.en{font-size:10px;color:#607898;font-style:italic;margin-top:2px;line-height:1.4}
 .wd-badge{background:rgba(184,76,43,.2);color:#E88A6A;border:1px solid #B84C2B;border-radius:4px;font-size:9px;padding:1px 5px;font-weight:700;margin-left:4px}
 .cbar{display:-webkit-box;display:-webkit-flex;display:flex;gap:3px;margin-top:5px}
 .cseg{-webkit-box-flex:1;-webkit-flex:1;flex:1;height:5px;border-radius:2px;background:rgba(201,149,106,.15)}
@@ -131,42 +131,42 @@ textarea{resize:vertical;min-height:60px}
 .drlevel{border-radius:8px;padding:12px;margin-bottom:8px;border:2px solid}
 .dr0{background:rgba(74,124,89,.1);border-color:#4A7C59}
 .dr1{background:rgba(212,160,50,.1);border-color:#D4A032}
-.dr2{background:rgba(201,149,106,.15);border-color:#80A8C8}
+.dr2{background:rgba(201,149,106,.15);border-color:#9ABCDA}
 .dr3{background:rgba(184,76,43,.15);border-color:#B84C2B}
 .dr4{background:rgba(139,30,15,.2);border-color:#8B1E0F}
 .wx-row{display:-webkit-box;display:-webkit-flex;display:flex;gap:6px;overflow-x:auto;-webkit-overflow-scrolling:touch;margin:8px 0;scrollbar-width:none}
 .wx-row::-webkit-scrollbar{display:none}
-.wxd{background:#182438;border:1px solid rgba(201,149,106,.15);border-radius:8px;padding:8px 6px;text-align:center;min-width:54px}
-.wxd .dn{font-size:9px;color:#4A6888;margin-bottom:3px}
+.wxd{background:#0C1A2C;border:1px solid rgba(201,149,106,.15);border-radius:8px;padding:8px 6px;text-align:center;min-width:54px}
+.wxd .dn{font-size:9px;color:#607898;margin-bottom:3px}
 .wxd .di{font-size:17px;margin-bottom:2px}
 .wxd .dt{font-size:11px;color:#E8C87A;font-weight:700}
-.wxd .ds{font-size:9px;color:#80A8C8;margin-top:1px}
+.wxd .ds{font-size:9px;color:#9ABCDA;margin-top:1px}
 .exrow{display:-webkit-box;display:-webkit-flex;display:flex;-webkit-box-align:center;-webkit-align-items:center;align-items:center;gap:10px;padding:8px 0;border-bottom:1px solid rgba(201,149,106,.08)}
 .exck{width:18px;height:18px;accent-color:#D4A032;cursor:pointer;-webkit-flex-shrink:0;flex-shrink:0}
 .sp-check{display:-webkit-box;display:-webkit-flex;display:flex;-webkit-flex-wrap:wrap;flex-wrap:wrap;gap:8px;margin-top:6px}
-.sp-chk{display:-webkit-box;display:-webkit-flex;display:flex;-webkit-box-align:center;-webkit-align-items:center;align-items:center;gap:4px;font-size:12px;cursor:pointer;font-weight:normal;text-transform:none;letter-spacing:0;color:#F5EDD8}
-.sp-chk input[type=checkbox]{width:20px;height:20px;accent-color:#D4A032;-webkit-flex-shrink:0;flex-shrink:0;cursor:pointer}
-.sp-chk{font-size:13px;gap:6px}
+.fsp-chip{padding:8px 14px;border-radius:20px;font-size:12px;font-weight:700;cursor:pointer;border:1px solid rgba(201,149,106,.22);color:#9ABCDA;background:transparent;font-family:Georgia,serif;-webkit-appearance:none;-webkit-transition:background .15s,color .15s,border-color .15s,-webkit-transform .1s;transition:background .15s,color .15s,border-color .15s,transform .1s;margin:2px 2px 2px 0}
+.fsp-chip.on{background:#D4A032;color:#060C16;border-color:#D4A032}
+.fsp-chip:active{-webkit-transform:scale(.92);transform:scale(.92)}
 .tl-tabs{display:-webkit-box;display:-webkit-flex;display:flex;border-radius:6px;overflow:hidden;border:1px solid rgba(201,149,106,.25);margin-bottom:12px}
-.tl-tab{-webkit-box-flex:1;-webkit-flex:1;flex:1;padding:7px;text-align:center;font-size:11px;font-weight:700;cursor:pointer;color:#80A8C8;background:transparent;border:none}
-.tl-tab.on{background:#D4A032;color:#101824}
-.hive-card{background:#182438;border-radius:8px;padding:10px;margin-bottom:8px;border:1px solid rgba(201,149,106,.2);cursor:pointer}
+.tl-tab{-webkit-box-flex:1;-webkit-flex:1;flex:1;padding:7px;text-align:center;font-size:11px;font-weight:700;cursor:pointer;color:#9ABCDA;background:transparent;border:none}
+.tl-tab.on{background:#D4A032;color:#060C16}
+.hive-card{background:#0C1A2C;border-radius:8px;padding:10px;margin-bottom:8px;border:1px solid rgba(201,149,106,.2);cursor:pointer}
 .proj-row{display:-webkit-box;display:-webkit-flex;display:flex;-webkit-box-pack:justify;-webkit-justify-content:space-between;justify-content:space-between;-webkit-box-align:center;-webkit-align-items:center;align-items:center;padding:8px 0;border-bottom:1px solid rgba(201,149,106,.08)}
 .proj-row:last-child{border-bottom:none}
 .h-chips{display:-webkit-box;display:-webkit-flex;display:flex;gap:5px;overflow-x:auto;-webkit-overflow-scrolling:touch;margin-bottom:8px;scrollbar-width:none;-webkit-flex-wrap:nowrap;flex-wrap:nowrap}
 .h-chips::-webkit-scrollbar{display:none}
-#toast{position:fixed;bottom:80px;left:50%;-webkit-transform:translateX(-50%) translateY(20px);transform:translateX(-50%) translateY(20px);background:#182438;border:1px solid #D4A032;color:#E8C87A;padding:10px 18px;border-radius:8px;font-size:13px;font-family:Georgia,serif;z-index:500;opacity:0;pointer-events:none;-webkit-transition:opacity .25s,-webkit-transform .25s;transition:opacity .25s,transform .25s;max-width:88%;text-align:center;box-shadow:0 4px 16px rgba(0,0,0,.4)}
+#toast{position:fixed;bottom:80px;left:50%;-webkit-transform:translateX(-50%) translateY(20px);transform:translateX(-50%) translateY(20px);background:#0C1A2C;border:1px solid #D4A032;color:#E8C87A;padding:10px 18px;border-radius:8px;font-size:13px;font-family:Georgia,serif;z-index:500;opacity:0;pointer-events:none;-webkit-transition:opacity .25s,-webkit-transform .25s;transition:opacity .25s,transform .25s;max-width:88%;text-align:center;box-shadow:0 4px 16px rgba(0,0,0,.4)}
 #toast.show{opacity:1;-webkit-transform:translateX(-50%) translateY(0);transform:translateX(-50%) translateY(0)}
 #toast.err{border-color:#B84C2B;color:#E88A6A}
 @-webkit-keyframes pgIn{from{opacity:0;-webkit-transform:translateY(6px)}to{opacity:1;-webkit-transform:translateY(0)}}
 @keyframes pgIn{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
 .pg.on{-webkit-animation:pgIn .2s ease;animation:pgIn .2s ease}
 .qabar{display:-webkit-box;display:-webkit-flex;display:flex;gap:6px;margin-bottom:12px}
-.qab{-webkit-box-flex:1;-webkit-flex:1;flex:1;background:linear-gradient(160deg,#182438,#101824);border:1px solid rgba(201,149,106,.2);border-radius:12px;padding:10px 4px 8px;text-align:center;cursor:pointer;font-family:Georgia,serif;color:#80A8C8;font-size:10px;font-weight:700;line-height:1;-webkit-appearance:none;border-style:solid;box-shadow:0 2px 8px rgba(0,0,0,.2);-webkit-transition:-webkit-transform .1s,opacity .1s;transition:transform .1s,opacity .1s}
+.qab{-webkit-box-flex:1;-webkit-flex:1;flex:1;background:linear-gradient(160deg,#0C1A2C,#060C16);border:1px solid rgba(201,149,106,.2);border-radius:12px;padding:10px 4px 8px;text-align:center;cursor:pointer;font-family:Georgia,serif;color:#9ABCDA;font-size:10px;font-weight:700;line-height:1;-webkit-appearance:none;border-style:solid;box-shadow:0 2px 8px rgba(0,0,0,.2);-webkit-transition:-webkit-transform .1s,opacity .1s;transition:transform .1s,opacity .1s}
 .qab .qi{font-size:18px;display:-webkit-box;display:-webkit-flex;display:flex;-webkit-box-align:center;-webkit-align-items:center;align-items:center;-webkit-box-pack:center;-webkit-justify-content:center;justify-content:center;width:36px;height:36px;border-radius:50%;background:rgba(201,149,106,.12);margin:0 auto 5px}
 .qab:active{-webkit-transform:scale(.93);transform:scale(.93);opacity:.8}
 .hsearch-wrap{position:relative;margin-bottom:8px}
-.hsearch{width:100%;background:#101824;border:1px solid rgba(201,149,106,.3);border-radius:6px;color:#F5EDD8;padding:8px 10px 8px 30px;font-family:Georgia,serif;font-size:14px;outline:none;-webkit-appearance:none;appearance:none;-webkit-box-sizing:border-box;box-sizing:border-box}
+.hsearch{width:100%;background:#060C16;border:1px solid rgba(201,149,106,.3);border-radius:6px;color:#F5EDD8;padding:8px 10px 8px 30px;font-family:Georgia,serif;font-size:14px;outline:none;-webkit-appearance:none;appearance:none;-webkit-box-sizing:border-box;box-sizing:border-box}
 .hsearch-icon{position:absolute;left:9px;top:50%;-webkit-transform:translateY(-50%);transform:translateY(-50%);font-size:13px;pointer-events:none}
 input:focus,select:focus,textarea:focus{border-color:rgba(212,160,50,.55);box-shadow:0 0 0 3px rgba(212,160,50,.1)}
 @-webkit-keyframes slideUp{from{opacity:0;-webkit-transform:translateY(50px);transform:translateY(50px)}to{opacity:1;-webkit-transform:translateY(0);transform:translateY(0)}}
@@ -184,9 +184,10 @@ input:focus,select:focus,textarea:focus{border-color:rgba(212,160,50,.55);box-sh
 ::-webkit-scrollbar{width:3px;height:3px}
 ::-webkit-scrollbar-track{background:transparent}
 ::-webkit-scrollbar-thumb{background:rgba(201,149,106,.25);border-radius:2px}
-.brand{text-shadow:0 1px 4px rgba(0,0,0,.3);font-size:19px}
-.sv{font-size:17px;letter-spacing:-.3px}
-.slb{letter-spacing:.8px}
+.brand{text-shadow:0 1px 4px rgba(0,0,0,.4);font-size:19px}
+.brand span{color:#F0C848}
+.sv{font-size:18px;letter-spacing:-.5px;font-weight:900}
+.slb{letter-spacing:.9px;font-size:8px}
 .ct{letter-spacing:.2px}
 .pf{-webkit-transition:width .4s ease;transition:width .4s ease}
 .banner{border-radius:10px;box-shadow:0 2px 10px rgba(0,0,0,.2)}
@@ -194,6 +195,10 @@ input:focus,select:focus,textarea:focus{border-color:rgba(212,160,50,.55);box-sh
 .ast{border-radius:8px;line-height:1.5}
 .drlevel{border-radius:10px}
 .sc{border-radius:10px}
+.nt.on .i{font-size:17px}
+.nav{border-bottom:1px solid rgba(212,160,50,.15)}
+input,select,textarea{color:#F5EDD8;border:1px solid rgba(201,149,106,.22)}
+input:focus,select:focus,textarea:focus{border-color:rgba(212,160,50,.7);box-shadow:0 0 0 3px rgba(212,160,50,.12)}
 
 </style>
 </head>
@@ -201,7 +206,7 @@ input:focus,select:focus,textarea:focus{border-color:rgba(212,160,50,.55);box-sh
 <div class="hdr">
   <div class="hdr-row">
     <div class="brand">&#10013; <span>Towne</span> Ranch</div>
-    <div class="hdr-r"><div class="sdot"></div><span style="font-size:10px;color:#80A8C8">Local</span><span style="font-size:10px;color:#4A6888;margin-left:4px" id="hdate"></span><button onclick="openBackup()" style="background:transparent;border:none;color:#4A6888;font-size:16px;cursor:pointer;padding:0 0 0 8px;line-height:1" title="Backup &amp; Restore">&#9881;</button></div>
+    <div class="hdr-r"><div class="sdot"></div><span style="font-size:10px;color:#9ABCDA">Local</span><span style="font-size:10px;color:#607898;margin-left:4px" id="hdate"></span><button onclick="openBackup()" style="background:transparent;border:none;color:#607898;font-size:16px;cursor:pointer;padding:0 0 0 8px;line-height:1" title="Backup &amp; Restore">&#9881;</button></div>
   </div>
 </div>
 <div class="nav" id="nav"></div>
@@ -274,13 +279,13 @@ input:focus,select:focus,textarea:focus{border-color:rgba(212,160,50,.55);box-sh
 <div class="g2"><div class="fg"><label>Usage Amount</label><input type="number" id="f-usage" placeholder="0" step="0.1"></div><div class="fg"><label>Per</label><select id="f-period"><option value="1">Day</option><option value="7">Week</option><option value="30">Month</option></select></div></div>
 <div class="fg"><label>Cost per Unit ($)</label><input type="number" id="f-cost" placeholder="0.00" step="0.01"></div>
 <div class="fg"><label>Applies To</label><div class="sp-check">
-<label class="sp-chk"><input type="checkbox" id="fsp-all" onclick="fspToggle(this)"> All Animals</label>
-<label class="sp-chk"><input type="checkbox" id="fsp-cattle" onclick="fspToggle(this)"> Cattle</label>
-<label class="sp-chk"><input type="checkbox" id="fsp-hog" onclick="fspToggle(this)"> Hogs</label>
-<label class="sp-chk"><input type="checkbox" id="fsp-sheep" onclick="fspToggle(this)"> Sheep</label>
-<label class="sp-chk"><input type="checkbox" id="fsp-goat" onclick="fspToggle(this)"> Goats</label>
-<label class="sp-chk"><input type="checkbox" id="fsp-poultry" onclick="fspToggle(this)"> Poultry</label>
-<label class="sp-chk"><input type="checkbox" id="fsp-bees" onclick="fspToggle(this)"> Bees</label>
+<button type="button" class="fsp-chip on" data-sp="All" onclick="fspChip(this)">All Animals</button>
+<button type="button" class="fsp-chip" data-sp="Cattle" onclick="fspChip(this)">🐄 Cattle</button>
+<button type="button" class="fsp-chip" data-sp="Hog" onclick="fspChip(this)">🐷 Hogs</button>
+<button type="button" class="fsp-chip" data-sp="Sheep" onclick="fspChip(this)">🐑 Sheep</button>
+<button type="button" class="fsp-chip" data-sp="Goat" onclick="fspChip(this)">🐐 Goats</button>
+<button type="button" class="fsp-chip" data-sp="Poultry" onclick="fspChip(this)">🐔 Poultry</button>
+<button type="button" class="fsp-chip" data-sp="Bees" onclick="fspChip(this)">🐝 Bees</button>
 </div></div>
 <div class="fg"><label>Notes</label><input id="f-notes" placeholder="Supplier, quality..."></div>
 <div class="g2" style="margin-top:8px"><button class="btn bo" onclick="closeM('m-feed')">Cancel</button><button class="btn bp" onclick="saveFeed()">Save</button></div>
@@ -414,7 +419,7 @@ input:focus,select:focus,textarea:focus{border-color:rgba(212,160,50,.55);box-sh
 <div class="mt">Set Your County</div>
 <div class="fg"><label>County FIPS Code</label><input id="cn-fips" placeholder="48439 = Tarrant"></div>
 <div class="fg"><label>County Name</label><input id="cn-name" placeholder="Tarrant"></div>
-<p style="font-size:11px;color:#4A6888">Tarrant=48439, Johnson=48251, Parker=48367, McLennan=48293</p>
+<p style="font-size:11px;color:#607898">Tarrant=48439, Johnson=48251, Parker=48367, McLennan=48293</p>
 <div class="g2" style="margin-top:8px"><button class="btn bo" onclick="closeM('m-county')">Cancel</button><button class="btn bp" onclick="saveCounty()">Save</button></div>
 </div></div>
 <!-- GOALS -->
@@ -428,7 +433,7 @@ input:focus,select:focus,textarea:focus{border-color:rgba(212,160,50,.55);box-sh
 <!-- BACKUP / RESTORE -->
 <div class="mo" id="m-backup"><div class="mb">
 <div class="mt">Backup &amp; Restore</div>
-<p style="font-size:12px;color:#80A8C8;margin-bottom:14px">Export all ranch data as a JSON file, or restore from a previous backup.</p>
+<p style="font-size:12px;color:#9ABCDA;margin-bottom:14px">Export all ranch data as a JSON file, or restore from a previous backup.</p>
 <button class="btn bp" onclick="doBackup()" style="margin-bottom:14px">&#8659; Export Backup</button>
 <div style="border-top:1px solid rgba(201,149,106,.2);padding-top:14px">
 <div class="fg"><label>Restore from Backup File</label><input type="file" id="bk-file" accept=".json,application/json"></div>
@@ -439,7 +444,7 @@ input:focus,select:focus,textarea:focus{border-color:rgba(212,160,50,.55);box-sh
 <!-- CONFIRM -->
 <div class="mo" id="m-confirm"><div class="mb">
 <div class="mt" id="conf-ttl">Are you sure?</div>
-<p id="conf-msg" style="font-size:13px;color:#80A8C8;margin-bottom:16px;line-height:1.6"></p>
+<p id="conf-msg" style="font-size:13px;color:#9ABCDA;margin-bottom:16px;line-height:1.6"></p>
 <div class="g2"><button class="btn bo" onclick="closeM('m-confirm')">Cancel</button><button class="btn bd" id="conf-ok">Confirm</button></div>
 </div></div>
 <!-- TOAST -->
@@ -513,10 +518,19 @@ function resizeImg(dataUrl,cb){
   img.onerror=function(){cb(dataUrl);};
   img.src=dataUrl;
 }
-function fspToggle(cb){
-  var spc=["cattle","hog","sheep","goat","poultry","bees"],i,c;
-  if(cb.id==="fsp-all"&&cb.checked){for(i=0;i<spc.length;i++){c=el("fsp-"+spc[i]);if(c)c.checked=false;}}
-  else if(cb.id!=="fsp-all"&&cb.checked){c=el("fsp-all");if(c)c.checked=false;}
+function fspChip(btn){
+  var sp=btn.getAttribute("data-sp"),chips=document.querySelectorAll(".fsp-chip"),i,anyOn;
+  if(sp==="All"){
+    for(i=0;i<chips.length;i++)chips[i].className="fsp-chip";
+    btn.className="fsp-chip on";
+  }else{
+    var allBtn=document.querySelector(".fsp-chip[data-sp='All']");
+    if(allBtn)allBtn.className="fsp-chip";
+    btn.className=btn.className.indexOf(" on")>=0?"fsp-chip":"fsp-chip on";
+    anyOn=false;chips=document.querySelectorAll(".fsp-chip");
+    for(i=0;i<chips.length;i++){if(chips[i].className.indexOf(" on")>=0)anyOn=true;}
+    if(!anyOn){if(allBtn)allBtn.className="fsp-chip on";}
+  }
 }
 function toast(msg,err){
   var t=el("toast");if(!t)return;
@@ -552,7 +566,7 @@ function plBarChart(){
   for(i=0;i<D.costs.length;i++){c=D.costs[i];mo=(c.date||"").slice(0,7);if(inc[mo]!==undefined){if(c.type==="income")inc[mo]+=c.amount;else exp[mo]+=c.amount;}}
   var maxVal=0;
   for(i=0;i<months.length;i++){if(inc[months[i]]>maxVal)maxVal=inc[months[i]];if(exp[months[i]]>maxVal)maxVal=exp[months[i]];}
-  if(!maxVal)return'<div style="font-size:11px;color:#4A6888">No transactions yet.</div>';
+  if(!maxVal)return'<div style="font-size:11px;color:#607898">No transactions yet.</div>';
   var n=months.length,H=50,LH=14,bw=17,gap=3,grpGap=6,grpW=bw*2+gap,colW=grpW+grpGap;
   var svgW=n*colW,svgH=H+LH;
   var html='<svg width="100%" viewBox="0 0 '+svgW+' '+svgH+'" preserveAspectRatio="none" style="display:block">';
@@ -563,7 +577,7 @@ function plBarChart(){
     var eh=exp[months[i]]>0?Math.max(2,Math.round(exp[months[i]]/maxVal*H)):0;
     if(ih)html+='<rect x="'+x+'" y="'+(H-ih)+'" width="'+bw+'" height="'+ih+'" fill="#4A7C59" rx="2"/>';
     if(eh)html+='<rect x="'+(x+bw+gap)+'" y="'+(H-eh)+'" width="'+bw+'" height="'+eh+'" fill="#B84C2B" rx="2"/>';
-    html+='<text x="'+(x+grpW/2).toFixed(0)+'" y="'+(H+11)+'" text-anchor="middle" font-size="7" fill="#4A6888">'+months[i].slice(5)+'</text>';
+    html+='<text x="'+(x+grpW/2).toFixed(0)+'" y="'+(H+11)+'" text-anchor="middle" font-size="7" fill="#607898">'+months[i].slice(5)+'</text>';
   }
   html+='</svg><div style="display:-webkit-box;display:-webkit-flex;display:flex;gap:12px;margin-top:5px"><span style="font-size:10px;color:#7EC89A">&#9646; Income</span><span style="font-size:10px;color:#E88A6A">&#9646; Expenses</span></div>';
   return html;
@@ -666,7 +680,7 @@ function openAnimal(id){
     if(["Cattle","Hog","Sheep","Goat"].indexOf(a.type)>=0){
       bs.style.display="block";
       brs=[];for(var j=0;j<D.breeding.length;j++){if(D.breeding[j].animalId===id||D.breeding[j].dam===a.tag)brs.push(D.breeding[j]);}
-      el("a-breed-list").innerHTML=brs.length?brs.map(function(b){return'<div class="ci" onclick="openBreed(\''+b.id+'\',\''+id+'\')"><div><div class="cd">'+esc(b.dam)+(b.sire?" x "+esc(b.sire):"")+'</div><div class="cc">'+esc(b.status)+" - "+(b.expected||"-")+'</div></div><span class="b '+(b.status==="Calved"?"bg":"bb")+'">'+b.status.split(" ")[0]+'</span></div>';}).join(""):'<div style="font-size:12px;color:#4A6888">No breeding records yet.</div>';
+      el("a-breed-list").innerHTML=brs.length?brs.map(function(b){return'<div class="ci" onclick="openBreed(\''+b.id+'\',\''+id+'\')"><div><div class="cd">'+esc(b.dam)+(b.sire?" x "+esc(b.sire):"")+'</div><div class="cc">'+esc(b.status)+" - "+(b.expected||"-")+'</div></div><span class="b '+(b.status==="Calved"?"bg":"bb")+'">'+b.status.split(" ")[0]+'</span></div>';}).join(""):'<div style="font-size:12px;color:#607898">No breeding records yet.</div>';
     }else{bs.style.display="none";}
   }else{
     ["a-id","a-tag","a-age","a-wt","a-rfid","a-pur","a-sire","a-dam","a-notes","a-bcs"].forEach(function(x){sv(x,"");});
@@ -712,14 +726,14 @@ function openFeed(id){
   id=id||null;sv("f-id",id||"");
   el("mf-ttl").textContent=id?"Edit Item":"Add Inventory Item";
   el("f-del-wrap").style.display=id?"block":"none";
-  ["all","cattle","hog","sheep","goat","poultry","bees"].forEach(function(s){var c=document.getElementById("fsp-"+s);if(c)c.checked=false;});
+  var allChips=document.querySelectorAll(".fsp-chip"),fci;for(fci=0;fci<allChips.length;fci++)allChips[fci].className="fsp-chip";
   if(id){
     var f=null;for(i=0;i<D.feed.length;i++){if(D.feed[i].id===id){f=D.feed[i];break;}}
     if(f){sv("f-item",f.item);sv("f-unit",f.unit);sv("f-qty",f.qty);sv("f-usage",f.usage!==undefined?f.usage:(f.daily||0));sv("f-period",f.period||1);sv("f-cost",f.cost);sv("f-notes",f.notes||"");sv("f-cat",f.cat||"Feed");
-      sp=f.species||["All"];for(i=0;i<sp.length;i++){cb=document.getElementById("fsp-"+sp[i].toLowerCase());if(cb)cb.checked=true;}}
+      sp=f.species||["All"];for(i=0;i<sp.length;i++){var fc=document.querySelector(".fsp-chip[data-sp='"+sp[i]+"']");if(fc)fc.className="fsp-chip on";}}
   }else{
     ["f-id","f-item","f-qty","f-usage","f-cost","f-notes"].forEach(function(x){sv(x,"");});
-    sv("f-period","1");sv("f-cat","Feed");cb=document.getElementById("fsp-all");if(cb)cb.checked=true;
+    sv("f-period","1");sv("f-cat","Feed");var allC=document.querySelector(".fsp-chip[data-sp='All']");if(allC)allC.className="fsp-chip on";
   }
   openM("m-feed");
 }
@@ -801,7 +815,7 @@ function openFinExport(){
 function toggleFinPeriod(){var p=gv("fe-per");el("fe-yr-wrap").style.display=(p==="year"||p==="month"||p==="quarter")?"block":"none";el("fe-mo-wrap").style.display=p==="month"?"block":"none";}
 function openAnimalExport(){
   var html="",i,a;
-  for(i=0;i<D.animals.length;i++){a=D.animals[i];html+='<div class="exrow"><input type="checkbox" class="exck" value="'+a.id+'" checked><div><div style="font-size:13px">'+(EMJ[a.type]||"")+" "+esc(a.tag)+'</div><div style="font-size:10px;color:#80A8C8">'+esc(a.type)+" - "+esc(a.health)+"</div></div></div>";}
+  for(i=0;i<D.animals.length;i++){a=D.animals[i];html+='<div class="exrow"><input type="checkbox" class="exck" value="'+a.id+'" checked><div><div style="font-size:13px">'+(EMJ[a.type]||"")+" "+esc(a.tag)+'</div><div style="font-size:10px;color:#9ABCDA">'+esc(a.type)+" - "+esc(a.health)+"</div></div></div>";}
   el("ex-list").innerHTML=html;openM("m-aexport");
 }
 function selAll(v){var cbs=document.querySelectorAll(".exck");for(var i=0;i<cbs.length;i++)cbs[i].checked=v;}
@@ -819,8 +833,8 @@ function saveCost(){var id=gv("c-id")||uid();dbSet("costs",{id:id,type:gv("c-typ
 function delCost(){if(confirm("Delete?")){dbDel("costs",gv("c-id"));closeM("m-cost");}}
 function saveFeed(){
   var id=gv("f-id")||uid(),usage=parseFloat(gv("f-usage"))||0,period=parseFloat(gv("f-period"))||1;
-  var spOpts=["All","Cattle","Hog","Sheep","Goat","Poultry","Bees"],sp=[],i,cb;
-  for(i=0;i<spOpts.length;i++){cb=document.getElementById("fsp-"+spOpts[i].toLowerCase());if(cb&&cb.checked)sp.push(spOpts[i]);}
+  var sp=[],i,selChips=document.querySelectorAll(".fsp-chip.on");
+  for(i=0;i<selChips.length;i++)sp.push(selChips[i].getAttribute("data-sp"));
   if(!sp.length)sp=["All"];
   dbSet("feed",{id:id,item:gv("f-item"),cat:gv("f-cat")||"Feed",unit:gv("f-unit"),qty:parseFloat(gv("f-qty"))||0,usage:usage,period:period,daily:usage/period,cost:parseFloat(gv("f-cost"))||0,species:sp,notes:gv("f-notes"),ts:Date.now()});
   closeM("m-feed");
@@ -841,7 +855,7 @@ function saveContact(){var id=gv("co-id")||uid();dbSet("contacts",{id:id,name:gv
 function delContact(){if(confirm("Remove?")){dbDel("contacts",gv("co-id"));closeM("m-contact");}}
 function saveLoss(){var id=gv("lo-id")||uid(),payout=parseFloat(gv("lo-payout"))||0;var obj={id:id,tag:gv("lo-tag"),animalType:gv("lo-at"),lossType:gv("lo-lt"),date:gv("lo-date")||today(),value:parseFloat(gv("lo-val"))||0,weight:parseFloat(gv("lo-wt"))||0,insurance:gv("lo-ins"),payout:payout,notes:gv("lo-notes"),ts:Date.now()};var a=null,i;for(i=0;i<D.animals.length;i++){if(D.animals[i].tag===obj.tag){a=D.animals[i];break;}}if(a)dbSet("animals",Object.assign({},a,{health:obj.lossType==="Culled"?"Culled":"Deceased"}));if(payout>0&&gv("lo-ins")==="approved")dbSet("costs",{id:uid(),type:"income",schedF:"Other expense",desc:"Insurance payout: "+obj.tag,amount:payout,date:obj.date,ts:Date.now()});dbSet("losses",obj);closeM("m-loss");}
 function delLoss(){if(confirm("Remove?")){dbDel("losses",gv("lo-id"));closeM("m-loss");}}
-function genLossReport(){var tag=gv("lo-tag"),type=gv("lo-at"),lt=gv("lo-lt"),date=gv("lo-date"),val=gv("lo-val"),wt=gv("lo-wt"),ins=gv("lo-ins"),payout=gv("lo-payout"),notes=gv("lo-notes"),a=null,i;for(i=0;i<D.animals.length;i++){if(D.animals[i].tag===tag){a=D.animals[i];break;}}var w=window.open("","_blank");w.document.write("<!DOCTYPE html><html><head><title>Loss Claim Report - "+tag+"</title><style>body{font-family:Georgia,serif;max-width:650px;margin:40px auto;color:#1a1a1a;font-size:13px;line-height:1.6}h1{font-size:20px}h2{font-size:14px;margin:16px 0 6px;border-bottom:1px solid #80A8C8;padding-bottom:3px}.row{display:flex;gap:20px;margin-bottom:4px}.lbl{color:#666;min-width:160px}.val{font-weight:bold}.box{background:#f9f5ec;border:1px solid #80A8C8;border-radius:6px;padding:12px;margin-top:8px;font-size:12px}.warn{background:#fff3cd;border:1px solid #D4A032;border-radius:6px;padding:10px;margin-top:12px;font-size:12px}</style></head><body>");w.document.write("<h1>LIVESTOCK LOSS / CLAIM REPORT</h1><p style='color:#888;font-size:11px'>Towne Ranch | Burleson, TX | Generated: "+new Date().toLocaleDateString()+"</p><h2>Animal</h2><div class='row'><div class='lbl'>Tag</div><div class='val'>"+esc(tag)+"</div></div><div class='row'><div class='lbl'>Type</div><div class='val'>"+esc(type)+"</div></div>");if(a){w.document.write("<div class='row'><div class='lbl'>Sex</div><div class='val'>"+(a.sex||"-")+"</div></div><div class='row'><div class='lbl'>Weight</div><div class='val'>"+(wt||a.weight||"-")+" lbs</div></div><div class='row'><div class='lbl'>Purchase Price</div><div class='val'>"+(a.purchase?money(a.purchase):"-")+"</div></div>");}w.document.write("<h2>Loss Details</h2><div class='row'><div class='lbl'>Loss Type</div><div class='val'>"+esc(lt)+"</div></div><div class='row'><div class='lbl'>Date</div><div class='val'>"+esc(date)+"</div></div><div class='row'><div class='lbl'>Claimed Value</div><div class='val'>"+money(val)+"</div></div><h2>Cause / Documentation</h2><div class='box'>"+(notes||"[No notes - add cause of death, vet diagnosis, and documentation]")+"</div><h2>Insurance</h2><div class='row'><div class='lbl'>Status</div><div class='val'>"+esc(ins)+"</div></div>"+(payout?"<div class='row'><div class='lbl'>Payout</div><div class='val'>"+money(payout)+"</div></div>":"")+"<h2>Schedule F Casualty Loss</h2><div class='box'>You may deduct the adjusted basis of the animal on Schedule F. Provide: (1) vet statement, (2) photos if available, (3) this report. Consult your tax advisor.</div><div class='warn'>This report is for your records. Provide copies to your insurance agent and accountant as needed.</div></body></html>");w.document.close();setTimeout(function(){w.print();},500);}
+function genLossReport(){var tag=gv("lo-tag"),type=gv("lo-at"),lt=gv("lo-lt"),date=gv("lo-date"),val=gv("lo-val"),wt=gv("lo-wt"),ins=gv("lo-ins"),payout=gv("lo-payout"),notes=gv("lo-notes"),a=null,i;for(i=0;i<D.animals.length;i++){if(D.animals[i].tag===tag){a=D.animals[i];break;}}var w=window.open("","_blank");w.document.write("<!DOCTYPE html><html><head><title>Loss Claim Report - "+tag+"</title><style>body{font-family:Georgia,serif;max-width:650px;margin:40px auto;color:#1a1a1a;font-size:13px;line-height:1.6}h1{font-size:20px}h2{font-size:14px;margin:16px 0 6px;border-bottom:1px solid #9ABCDA;padding-bottom:3px}.row{display:flex;gap:20px;margin-bottom:4px}.lbl{color:#666;min-width:160px}.val{font-weight:bold}.box{background:#f9f5ec;border:1px solid #9ABCDA;border-radius:6px;padding:12px;margin-top:8px;font-size:12px}.warn{background:#fff3cd;border:1px solid #D4A032;border-radius:6px;padding:10px;margin-top:12px;font-size:12px}</style></head><body>");w.document.write("<h1>LIVESTOCK LOSS / CLAIM REPORT</h1><p style='color:#888;font-size:11px'>Towne Ranch | Burleson, TX | Generated: "+new Date().toLocaleDateString()+"</p><h2>Animal</h2><div class='row'><div class='lbl'>Tag</div><div class='val'>"+esc(tag)+"</div></div><div class='row'><div class='lbl'>Type</div><div class='val'>"+esc(type)+"</div></div>");if(a){w.document.write("<div class='row'><div class='lbl'>Sex</div><div class='val'>"+(a.sex||"-")+"</div></div><div class='row'><div class='lbl'>Weight</div><div class='val'>"+(wt||a.weight||"-")+" lbs</div></div><div class='row'><div class='lbl'>Purchase Price</div><div class='val'>"+(a.purchase?money(a.purchase):"-")+"</div></div>");}w.document.write("<h2>Loss Details</h2><div class='row'><div class='lbl'>Loss Type</div><div class='val'>"+esc(lt)+"</div></div><div class='row'><div class='lbl'>Date</div><div class='val'>"+esc(date)+"</div></div><div class='row'><div class='lbl'>Claimed Value</div><div class='val'>"+money(val)+"</div></div><h2>Cause / Documentation</h2><div class='box'>"+(notes||"[No notes - add cause of death, vet diagnosis, and documentation]")+"</div><h2>Insurance</h2><div class='row'><div class='lbl'>Status</div><div class='val'>"+esc(ins)+"</div></div>"+(payout?"<div class='row'><div class='lbl'>Payout</div><div class='val'>"+money(payout)+"</div></div>":"")+"<h2>Schedule F Casualty Loss</h2><div class='box'>You may deduct the adjusted basis of the animal on Schedule F. Provide: (1) vet statement, (2) photos if available, (3) this report. Consult your tax advisor.</div><div class='warn'>This report is for your records. Provide copies to your insurance agent and accountant as needed.</div></body></html>");w.document.close();setTimeout(function(){w.print();},500);}
 function saveLoan(){var id=gv("ln-id")||uid();dbSet("loans",{id:id,desc:gv("ln-desc"),orig:parseFloat(gv("ln-orig"))||0,bal:parseFloat(gv("ln-bal"))||0,pmt:parseFloat(gv("ln-pmt"))||0,rate:parseFloat(gv("ln-rate"))||0,lender:gv("ln-lender"),ts:Date.now()});closeM("m-loan");}
 function delLoan(){if(confirm("Remove?")){dbDel("loans",gv("ln-id"));closeM("m-loan");}}
 function saveRain(){dbSet("rainfall",{id:uid(),date:gv("rn-date")||today(),inches:parseFloat(gv("rn-in"))||0,notes:gv("rn-notes"),ts:Date.now()});closeM("m-rain");}
@@ -866,7 +880,7 @@ function doAnimalExport(){
   var fmt=gv("ex-fmt");
   if(fmt==="csv"){var h=["Tag","Type","Sex","Age","Weight","Purchase","RFID","Sire","Dam","Health","BCS","Added","Notes","WD_Until"];var rows=animals.map(function(a){var wd=wdDate(a.tag)||"";return[a.tag,a.type,a.sex,a.age,a.weight,a.purchase,a.rfid,a.sire,a.dam,a.health,a.bcs,a.added,(a.notes||"").replace(/,/g,";"),wd].map(function(x){return'"'+(x||"")+'"';}).join(",");});dlFile([h.join(",")].concat(rows).join("\n"),"towne-ranch-herd.csv","text/csv");}
   else if(fmt==="json"){var out=[];for(i=0;i<animals.length;i++){a=animals[i];var wts=[],txs=[],brs2=[],j;for(j=0;j<D.weights.length;j++){if(D.weights[j].animalId===a.id)wts.push(D.weights[j]);}for(j=0;j<D.vax.length;j++){if(D.vax[j].tag===a.tag)txs.push(D.vax[j]);}for(j=0;j<D.breeding.length;j++){if(D.breeding[j].animalId===a.id||D.breeding[j].dam===a.tag)brs2.push(D.breeding[j]);}out.push(Object.assign({},a,{weights:wts,treatments:txs,breeding:brs2}));}dlFile(JSON.stringify(out,null,2),"towne-ranch-herd.json","application/json");}
-  else if(fmt==="pdf"){var w=window.open("","_blank");w.document.write("<!DOCTYPE html><html><head><title>Towne Ranch Herd</title><style>body{font-family:Georgia,serif;max-width:750px;margin:30px auto;color:#1a1a1a;font-size:12px}.ac{border:1px solid #80A8C8;border-radius:8px;padding:14px;margin-bottom:14px;page-break-inside:avoid}.atop{display:flex;justify-content:space-between;align-items:center;margin-bottom:6px}.atag{font-size:16px;font-weight:bold;color:#1E2E45}.ai{display:grid;grid-template-columns:1fr 1fr 1fr;gap:3px;font-size:11px;margin:6px 0}.ww{background:#f8d7da;color:#721c24;padding:4px 8px;border-radius:4px;font-size:11px;font-weight:bold;margin-top:5px}@media print{.ac{page-break-inside:avoid}}</style></head><body><h1>Towne Ranch - Herd Records</h1><p style='color:#888;font-size:11px'>Burleson TX | "+new Date().toLocaleDateString()+" | "+animals.length+" animals</p>");for(i=0;i<animals.length;i++){a=animals[i];var wd2=wdDate(a.tag);w.document.write("<div class='ac'><div class='atop'><div class='atag'>"+(EMJ[a.type]||"")+" "+esc(a.tag)+"</div><div>"+a.health+"</div></div><div class='ai'><span>Type: "+esc(a.type)+"</span><span>Sex: "+esc(a.sex||"-")+"</span><span>Age: "+esc(a.age||"-")+"</span><span>Weight: "+(a.weight?a.weight+" lbs":"-")+"</span><span>BCS: "+(a.bcs||"-")+"</span><span>Purchased: "+(a.purchase?money(a.purchase):"-")+"</span></div>"+(wd2?"<div class='ww'>WITHDRAWAL ACTIVE - Not for sale until "+wd2+"</div>":"")+(a.notes?"<div style='font-size:11px;color:#666;font-style:italic;margin-top:4px'>"+esc(a.notes)+"</div>":"")+"</div>");}w.document.write("</body></html>");w.document.close();setTimeout(function(){w.print();},500);}
+  else if(fmt==="pdf"){var w=window.open("","_blank");w.document.write("<!DOCTYPE html><html><head><title>Towne Ranch Herd</title><style>body{font-family:Georgia,serif;max-width:750px;margin:30px auto;color:#1a1a1a;font-size:12px}.ac{border:1px solid #9ABCDA;border-radius:8px;padding:14px;margin-bottom:14px;page-break-inside:avoid}.atop{display:flex;justify-content:space-between;align-items:center;margin-bottom:6px}.atag{font-size:16px;font-weight:bold;color:#112038}.ai{display:grid;grid-template-columns:1fr 1fr 1fr;gap:3px;font-size:11px;margin:6px 0}.ww{background:#f8d7da;color:#721c24;padding:4px 8px;border-radius:4px;font-size:11px;font-weight:bold;margin-top:5px}@media print{.ac{page-break-inside:avoid}}</style></head><body><h1>Towne Ranch - Herd Records</h1><p style='color:#888;font-size:11px'>Burleson TX | "+new Date().toLocaleDateString()+" | "+animals.length+" animals</p>");for(i=0;i<animals.length;i++){a=animals[i];var wd2=wdDate(a.tag);w.document.write("<div class='ac'><div class='atop'><div class='atag'>"+(EMJ[a.type]||"")+" "+esc(a.tag)+"</div><div>"+a.health+"</div></div><div class='ai'><span>Type: "+esc(a.type)+"</span><span>Sex: "+esc(a.sex||"-")+"</span><span>Age: "+esc(a.age||"-")+"</span><span>Weight: "+(a.weight?a.weight+" lbs":"-")+"</span><span>BCS: "+(a.bcs||"-")+"</span><span>Purchased: "+(a.purchase?money(a.purchase):"-")+"</span></div>"+(wd2?"<div class='ww'>WITHDRAWAL ACTIVE - Not for sale until "+wd2+"</div>":"")+(a.notes?"<div style='font-size:11px;color:#666;font-style:italic;margin-top:4px'>"+esc(a.notes)+"</div>":"")+"</div>");}w.document.write("</body></html>");w.document.close();setTimeout(function(){w.print();},500);}
   else{var c="TOWNE RANCH - HERD RECORDS\n"+new Date().toLocaleDateString()+"\n";for(i=0;i<animals.length;i++){a=animals[i];var wd3=wdDate(a.tag);c+=(EMJ[a.type]||"")+" "+a.tag+" ("+a.type+")\n  "+a.health+" | "+a.sex+" | "+(a.age||"-")+" | "+(a.weight?a.weight+" lbs":"-")+"\n"+(wd3?"  *** WITHDRAWAL until "+wd3+" ***\n":"")+"\n";}dlFile(c,"towne-ranch-herd.txt","text/plain");}
   closeM("m-aexport");
 }
@@ -880,7 +894,7 @@ function doFinExport(){
   var net=tInc-tExp;
   var sf={};for(i=0;i<costs.length;i++){c=costs[i];if(c.type==="expense"){var k=c.schedF||"Other";if(!sf[k])sf[k]=0;sf[k]+=c.amount;}}
   var sfKeys=Object.keys(sf);sfKeys.sort(function(a,b){return sf[b]-sf[a];});
-  if(fmt==="pdf"){var w=window.open("","_blank");var sfHtml="",txHtml="";for(i=0;i<sfKeys.length;i++){sfHtml+="<div class='row'><span>"+sfKeys[i]+"</span><span>"+money(sf[sfKeys[i]])+"</span></div>";}for(i=0;i<costs.length;i++){c=costs[i];txHtml+="<tr><td>"+(c.date||"")+"</td><td>"+esc(c.desc)+"</td><td>"+(c.schedF||"")+"</td><td style='color:"+(c.type==="income"?"#155724":"#721c24")+"'>"+(c.type==="income"?"+":"-")+money(c.amount)+"</td></tr>";}w.document.write("<!DOCTYPE html><html><head><title>Towne Ranch Finance - "+label+"</title><style>body{font-family:Georgia,serif;max-width:700px;margin:40px auto;color:#1a1a1a;font-size:13px}h1{font-size:22px}h2{font-size:14px;margin:18px 0 6px;border-bottom:2px solid #4A6888;padding-bottom:3px}.meta{color:#666;font-size:11px;margin-bottom:18px}.row{display:flex;justify-content:space-between;padding:5px 0;border-bottom:1px solid #eee}.total{font-weight:bold;background:#f5f0e8;padding:8px 4px}.grn{color:#155724}.red{color:#721c24}table{width:100%;border-collapse:collapse;font-size:11px;margin-top:8px}th{background:#1E2E45;color:#E8C87A;padding:6px;text-align:left}td{padding:5px 6px;border-bottom:1px solid #eee}</style></head><body><h1>Towne Ranch - Financial Report</h1><div class='meta'>Period: "+label+" | Generated: "+new Date().toLocaleDateString()+"</div><h2>Summary</h2><div class='row'><span>Total Income</span><span class='grn'>"+money(tInc)+"</span></div><div class='row'><span>Total Expenses</span><span class='red'>"+money(tExp)+"</span></div><div class='row total'><span>Net P&L</span><span class='"+(net>=0?"grn":"red")+"'>"+(net>=0?"+":"")+money(net)+"</span></div><h2>Schedule F</h2>"+sfHtml+"<h2>Transactions ("+costs.length+")</h2><table><tr><th>Date</th><th>Description</th><th>Category</th><th>Amount</th></tr>"+txHtml+"</table></body></html>");w.document.close();setTimeout(function(){w.print();},500);}
+  if(fmt==="pdf"){var w=window.open("","_blank");var sfHtml="",txHtml="";for(i=0;i<sfKeys.length;i++){sfHtml+="<div class='row'><span>"+sfKeys[i]+"</span><span>"+money(sf[sfKeys[i]])+"</span></div>";}for(i=0;i<costs.length;i++){c=costs[i];txHtml+="<tr><td>"+(c.date||"")+"</td><td>"+esc(c.desc)+"</td><td>"+(c.schedF||"")+"</td><td style='color:"+(c.type==="income"?"#155724":"#721c24")+"'>"+(c.type==="income"?"+":"-")+money(c.amount)+"</td></tr>";}w.document.write("<!DOCTYPE html><html><head><title>Towne Ranch Finance - "+label+"</title><style>body{font-family:Georgia,serif;max-width:700px;margin:40px auto;color:#1a1a1a;font-size:13px}h1{font-size:22px}h2{font-size:14px;margin:18px 0 6px;border-bottom:2px solid #607898;padding-bottom:3px}.meta{color:#666;font-size:11px;margin-bottom:18px}.row{display:flex;justify-content:space-between;padding:5px 0;border-bottom:1px solid #eee}.total{font-weight:bold;background:#f5f0e8;padding:8px 4px}.grn{color:#155724}.red{color:#721c24}table{width:100%;border-collapse:collapse;font-size:11px;margin-top:8px}th{background:#112038;color:#E8C87A;padding:6px;text-align:left}td{padding:5px 6px;border-bottom:1px solid #eee}</style></head><body><h1>Towne Ranch - Financial Report</h1><div class='meta'>Period: "+label+" | Generated: "+new Date().toLocaleDateString()+"</div><h2>Summary</h2><div class='row'><span>Total Income</span><span class='grn'>"+money(tInc)+"</span></div><div class='row'><span>Total Expenses</span><span class='red'>"+money(tExp)+"</span></div><div class='row total'><span>Net P&L</span><span class='"+(net>=0?"grn":"red")+"'>"+(net>=0?"+":"")+money(net)+"</span></div><h2>Schedule F</h2>"+sfHtml+"<h2>Transactions ("+costs.length+")</h2><table><tr><th>Date</th><th>Description</th><th>Category</th><th>Amount</th></tr>"+txHtml+"</table></body></html>");w.document.close();setTimeout(function(){w.print();},500);}
   else if(fmt==="csv"){var rows2=costs.map(function(c2){return[(c2.date||""),'"'+esc(c2.desc)+'"',(c2.schedF||""),c2.type,c2.amount.toFixed(2)].join(",");});dlFile(["Date,Description,Category,Type,Amount"].concat(rows2).join("\n"),"finance-"+label.replace(/[^a-z0-9]/gi,"-")+".csv","text/csv");}
   else{var ct="TOWNE RANCH - FINANCE\nPeriod: "+label+"\n";for(i=0;i<sfKeys.length;i++){ct+=sfKeys[i]+": "+money(sf[sfKeys[i]])+"\n";}ct+="\n";for(i=0;i<costs.length;i++){ct+=(costs[i].date||"")+" "+(costs[i].type==="income"?"+":"-")+money(costs[i].amount)+" "+costs[i].desc+"\n";}dlFile(ct,"finance.txt","text/plain");}
   closeM("m-fexport");
@@ -959,18 +973,18 @@ function rDash(){
   var g2Keys=Object.keys(g2);
   var html=tlTabsHTML();
   html+='<div class="sg4"><div class="sb"><div class="sv">'+act.length+'</div><div class="slb">Animals</div></div><div class="sb"><div class="sv neg">'+moneyS(mExp)+'</div><div class="slb">Expenses</div></div><div class="sb"><div class="sv pos">'+moneyS(mInc)+'</div><div class="slb">Income</div></div><div class="sb"><div class="sv '+(net>=0?"pos":"neg")+'">'+moneyS(Math.abs(net))+'</div><div class="slb">Net</div></div></div>';
-  html+='<div style="font-size:10px;color:#4A6888;text-align:center;margin:-6px 0 10px">'+tlLabel()+'</div>';
+  html+='<div style="font-size:10px;color:#607898;text-align:center;margin:-6px 0 10px">'+tlLabel()+'</div>';
   html+='<div class="qabar"><button class="qab" onclick="openAnimal()"><span class="qi">🐄</span>Animal</button><button class="qab" onclick="openCost()"><span class="qi">💰</span>Cost</button><button class="qab" onclick="openEgg()"><span class="qi">🥚</span>Eggs</button><button class="qab" onclick="sv(\'rn-date\',today());sv(\'rn-in\',\'\');sv(\'rn-notes\',\'\');openM(\'m-rain\')"><span class="qi">🌧️</span>Rain</button></div>';
   if(alerts.length||dueRem.length){html+='<div class="card"><div class="ct" style="margin-bottom:8px">Alerts</div>';for(i=0;i<dueRem.length;i++)html+='<div class="ast warn">🔔 '+esc(dueRem[i].label)+' - '+dueRem[i].date+'</div>';for(i=0;i<alerts.length;i++)html+='<div class="ast '+alerts[i].cls+'">'+alerts[i].msg+'</div>';html+='</div>';}
   html+='<div class="card"><div class="ch"><div class="ct">Herd Summary</div><button class="btn bo bxs" onclick="openAnimalExport()">Export</button></div>';
-  if(!g2Keys.length){html+='<div style="font-size:12px;color:#4A6888">No animals yet. Go to Herd to add.</div>';}
+  if(!g2Keys.length){html+='<div style="font-size:12px;color:#607898">No animals yet. Go to Herd to add.</div>';}
   else{for(i=0;i<g2Keys.length;i++){var gk=g2Keys[i];html+='<div style="display:flex;align-items:center;gap:8px;padding:6px 0;border-bottom:1px solid rgba(201,149,106,.08)"><span style="font-size:18px">'+(gk==="Hives"?"🐝":(EMJ[gk]||""))+'</span><span style="flex:1;font-size:13px">'+gk+'</span><span style="font-size:14px;color:#E8C87A;font-weight:700">'+g2[gk]+'</span></div>';}}
   html+='</div><div class="card"><div class="ct" style="margin-bottom:8px">Recent Transactions</div>';
-  if(!recent.length)html+='<div style="font-size:12px;color:#4A6888">No transactions yet.</div>';
+  if(!recent.length)html+='<div style="font-size:12px;color:#607898">No transactions yet.</div>';
   else{for(i=0;i<recent.length;i++){c=recent[i];html+='<div class="ci" onclick="openCost(\''+c.id+'\')"><div><div class="cd">'+esc(c.desc)+'</div><div class="cc">'+(c.schedF||"")+" - "+(c.date||"")+'</div></div><div class="ca '+(c.type==="income"?"inc":"")+'">'+( c.type==="income"?"+":"-")+money(c.amount)+'</div></div>';}}
   html+='</div><div class="card"><div class="ch"><div class="ct">Rainfall (30 days)</div><button class="btn bo bxs" onclick="sv(\'rn-date\',today());sv(\'rn-in\',\'\');sv(\'rn-notes\',\'\');openM(\'m-rain\')">+ Log</button></div>';
-  if(!rain30.length)html+='<div style="font-size:12px;color:#4A6888">No rainfall logged.</div>';
-  else{html+='<div style="font-size:11px;color:#80A8C8;margin-bottom:5px">Total: <strong style="color:#E8C87A">'+rTotal.toFixed(2)+'"</strong></div><div style="display:flex;align-items:flex-end;gap:3px;height:40px">';for(i=0;i<rain30.length;i++)html+='<div style="background:#5B8FA8;border-radius:2px 2px 0 0;flex:1;min-height:2px;height:'+Math.round(rain30[i].inches/rMax*38+2)+'px;opacity:.7"></div>';html+='</div>';}
+  if(!rain30.length)html+='<div style="font-size:12px;color:#607898">No rainfall logged.</div>';
+  else{html+='<div style="font-size:11px;color:#9ABCDA;margin-bottom:5px">Total: <strong style="color:#E8C87A">'+rTotal.toFixed(2)+'"</strong></div><div style="display:flex;align-items:flex-end;gap:3px;height:40px">';for(i=0;i<rain30.length;i++)html+='<div style="background:#5B8FA8;border-radius:2px 2px 0 0;flex:1;min-height:2px;height:'+Math.round(rain30[i].inches/rMax*38+2)+'px;opacity:.7"></div>';html+='</div>';}
   html+='</div>';pg.innerHTML=html;
 }
 
@@ -990,7 +1004,7 @@ function buildHerdList(){
     html+='<div class="card" style="padding:9px 11px"><div class="sl2">'+(EMJ[type]||"")+" "+type+" ("+animals.length+")</div>";
     for(i=0;i<animals.length;i++){
       a=animals[i];var wd=wdDate(a.tag);var spark=sparkSVG(a.id);
-      html+='<div class="li" onclick="openAnimal(\''+a.id+'\')"><div class="le">'+(EMJ[a.type]||"")+'</div><div class="lm"><div class="ln">'+esc(a.tag)+(wd?'<span class="wd-badge">WD '+du(wd)+'d</span>':'')+(spark?spark:'')+'</div><div class="ls">'+(a.sex||"-")+" - "+(a.age||"-")+" - "+(a.weight?a.weight+" lbs":"-")+(a.bcs?" BCS"+a.bcs:"")+'</div>'+(a.notes?'<div class="en">'+esc(a.notes.slice(0,60))+(a.notes.length>60?"...":"")+'</div>':'')+'</div><div class="lr"><span class="b '+(HB[a.health]||"bb")+'">'+a.health+'</span>'+(a.purchase?'<div style="font-size:10px;color:#4A6888;margin-top:2px">'+moneyS(a.purchase)+'</div>':'')+'</div></div>';
+      html+='<div class="li" onclick="openAnimal(\''+a.id+'\')"><div class="le">'+(EMJ[a.type]||"")+'</div><div class="lm"><div class="ln">'+esc(a.tag)+(wd?'<span class="wd-badge">WD '+du(wd)+'d</span>':'')+(spark?spark:'')+'</div><div class="ls">'+(a.sex||"-")+" - "+(a.age||"-")+" - "+(a.weight?a.weight+" lbs":"-")+(a.bcs?" BCS"+a.bcs:"")+'</div>'+(a.notes?'<div class="en">'+esc(a.notes.slice(0,60))+(a.notes.length>60?"...":"")+'</div>':'')+'</div><div class="lr"><span class="b '+(HB[a.health]||"bb")+'">'+a.health+'</span>'+(a.purchase?'<div style="font-size:10px;color:#607898;margin-top:2px">'+moneyS(a.purchase)+'</div>':'')+'</div></div>';
     }
     html+='</div>';
   }
@@ -1021,14 +1035,14 @@ function rHealth(){
   var html="";
   if(wdAnimals.length){html+='<div class="card"><div class="ct" style="margin-bottom:8px">Withdrawal Active</div>';for(i=0;i<wdAnimals.length;i++){var wd=wdDate(wdAnimals[i].tag);html+='<div class="ast pur">💊 '+esc(wdAnimals[i].tag)+" ("+wdAnimals[i].type+") - Not for sale until "+wd+" ("+du(wd)+"d)</div>";}html+='</div>';}
   html+='<div class="card"><div class="ch"><div class="ct">Upcoming Due</div><button class="btn bo bxs" onclick="openVax()">+ Add</button></div>';
-  if(!upcoming.length)html+='<div style="font-size:12px;color:#4A6888">No upcoming treatments.</div>';
+  if(!upcoming.length)html+='<div style="font-size:12px;color:#607898">No upcoming treatments.</div>';
   else{for(i=0;i<upcoming.length;i++){r=upcoming[i];d=du(r.next);html+='<div class="ci" onclick="openVax(\''+r.id+'\')"><div style="flex:1"><div class="cd">'+esc(r.tag)+" - "+esc(r.product)+'</div><div class="cc">'+r.type+" - Due: "+r.next+(r.wd?" | WD: "+r.wd:"")+'</div>'+(r.notes?'<div class="en">'+esc(r.notes)+'</div>':'')+'</div><span class="b '+(d<=3?"br":d<=14?"by":"bg")+'">'+(d<=0?"OVERDUE":d+"d")+'</span></div>';}}
   html+='</div><div class="card"><div class="ct" style="margin-bottom:8px">Treatment History</div>';
-  if(!recent.length)html+='<div style="font-size:12px;color:#4A6888">No treatments logged.</div>';
+  if(!recent.length)html+='<div style="font-size:12px;color:#607898">No treatments logged.</div>';
   else{for(i=0;i<recent.length;i++){r=recent[i];html+='<div class="ci" onclick="openVax(\''+r.id+'\')"><div style="flex:1"><div class="cd">'+esc(r.tag)+" - "+esc(r.product)+(r.dose?" ("+r.dose+")":'')+'</div><div class="cc">'+r.type+" - "+(r.date||"")+(r.wd?" | WD: "+r.wd:"")+'</div>'+(r.notes?'<div class="en">'+esc(r.notes)+'</div>':'')+'</div><span class="b bb" style="font-size:9px">'+(r.type||"").slice(0,3).toUpperCase()+'</span></div>';}}
   html+='</div><div class="card"><div class="ct" style="margin-bottom:8px">Weight and ADG</div>';
-  if(!act.length)html+='<div style="font-size:12px;color:#4A6888">No active animals.</div>';
-  else{for(i=0;i<act.length;i++){var an=act[i];var logs=[],j;for(j=0;j<D.weights.length;j++){if(D.weights[j].animalId===an.id)logs.push(D.weights[j]);}logs.sort(function(a,b){return a.date.localeCompare(b.date);});var adg=null;if(logs.length>=2)adg=((logs[logs.length-1].weight-logs[0].weight)/Math.max(1,(new Date(logs[logs.length-1].date)-new Date(logs[0].date))/86400000)).toFixed(2);html+='<div style="padding:7px 0;border-bottom:1px solid rgba(201,149,106,.08)"><div style="display:flex;justify-content:space-between;align-items:center"><div style="font-size:13px;font-weight:700">'+esc(an.tag)+'</div><div style="display:flex;gap:5px;align-items:center">'+(adg?'<span class="b bg">ADG '+adg+'</span>':'')+'<button class="btn bo bxs" onclick="openWeight(\''+an.id+'\')">+ Wt</button></div></div>';for(j=0;j<logs.length;j++){var l=logs[j];html+='<div style="display:flex;justify-content:space-between;align-items:center;padding:3px 0;border-bottom:1px solid rgba(201,149,106,.05)"><div style="font-size:11px;color:#80A8C8">'+l.date+': <strong style="color:#F5EDD8">'+l.weight+'lbs</strong>'+(l.notes?' - <em>'+esc(l.notes)+'</em>':'')+'</div><button class="btn bo bxs" onclick="openWeight(\''+an.id+'\',\''+l.id+'\')">Edit</button></div>';}if(!logs.length)html+='<div style="font-size:10px;color:#4A6888">No weights logged</div>';html+='</div>';}}
+  if(!act.length)html+='<div style="font-size:12px;color:#607898">No active animals.</div>';
+  else{for(i=0;i<act.length;i++){var an=act[i];var logs=[],j;for(j=0;j<D.weights.length;j++){if(D.weights[j].animalId===an.id)logs.push(D.weights[j]);}logs.sort(function(a,b){return a.date.localeCompare(b.date);});var adg=null;if(logs.length>=2)adg=((logs[logs.length-1].weight-logs[0].weight)/Math.max(1,(new Date(logs[logs.length-1].date)-new Date(logs[0].date))/86400000)).toFixed(2);html+='<div style="padding:7px 0;border-bottom:1px solid rgba(201,149,106,.08)"><div style="display:flex;justify-content:space-between;align-items:center"><div style="font-size:13px;font-weight:700">'+esc(an.tag)+'</div><div style="display:flex;gap:5px;align-items:center">'+(adg?'<span class="b bg">ADG '+adg+'</span>':'')+'<button class="btn bo bxs" onclick="openWeight(\''+an.id+'\')">+ Wt</button></div></div>';for(j=0;j<logs.length;j++){var l=logs[j];html+='<div style="display:flex;justify-content:space-between;align-items:center;padding:3px 0;border-bottom:1px solid rgba(201,149,106,.05)"><div style="font-size:11px;color:#9ABCDA">'+l.date+': <strong style="color:#F5EDD8">'+l.weight+'lbs</strong>'+(l.notes?' - <em>'+esc(l.notes)+'</em>':'')+'</div><button class="btn bo bxs" onclick="openWeight(\''+an.id+'\',\''+l.id+'\')">Edit</button></div>';}if(!logs.length)html+='<div style="font-size:10px;color:#607898">No weights logged</div>';html+='</div>';}}
   html+='</div>';pg.innerHTML=html;
 }
 
@@ -1048,7 +1062,7 @@ function rInv(){
     for(i=0;i<items.length;i++){f=items[i];var days=(f.daily||0)>0?Math.floor(f.qty/(f.daily||1)):null;var pct=days!==null?Math.min(100,Math.round(days/30*100)):50;var pLabel=(f.period||1)==7?"wk":(f.period||1)==30?"mo":"day";var sp=(f.species||["All"]).join(", ");
     html+='<div style="padding:8px 0;border-bottom:1px solid rgba(201,149,106,.09)"><div class="li" style="border:none;padding:0" onclick="openFeed(\''+f.id+'\')"><div class="le">'+icon+'</div><div class="lm"><div class="ln">'+esc(f.item)+'</div><div class="ls">'+f.qty+" "+esc(f.unit)+" | "+money(f.cost)+"/"+esc(f.unit)+(f.usage?" | "+(f.usage||0)+"/"+pLabel:"")+'</div>';
     if(days!==null)html+='<div class="pb"><div class="pf" style="width:'+pct+'%;background:'+(pct<25?"#B84C2B":pct<50?"#D4A032":"#4A7C59")+'"></div></div>';
-    html+='<div style="font-size:9px;color:#4A6888;margin-top:2px">For: '+sp+'</div>'+(f.notes?'<div class="en">'+esc(f.notes)+'</div>':'')+'</div><div class="lr" style="display:flex;flex-direction:column;align-items:flex-end;gap:4px"><span class="b '+(days===null?"bb":days<7?"br":days<14?"by":"bg")+'">'+(days===null?"-":days+"d")+'</span><span class="rbtn" onclick="event.stopPropagation();openRestock(\''+f.id+'\')">+ Restock</span></div></div></div>';}
+    html+='<div style="font-size:9px;color:#607898;margin-top:2px">For: '+sp+'</div>'+(f.notes?'<div class="en">'+esc(f.notes)+'</div>':'')+'</div><div class="lr" style="display:flex;flex-direction:column;align-items:flex-end;gap:4px"><span class="b '+(days===null?"bb":days<7?"br":days<14?"by":"bg")+'">'+(days===null?"-":days+"d")+'</span><span class="rbtn" onclick="event.stopPropagation();openRestock(\''+f.id+'\')">+ Restock</span></div></div></div>';}
     html+='</div>';
   }
   if(!D.feed.length)html+='<div class="empty"><div class="ei">🌾</div><div class="et">No items. Tap + to add.</div></div>';
@@ -1076,7 +1090,7 @@ function rApiary(){
   var totalLbs=0,totalInc=0;for(i=0;i<D.harvests.length;i++){totalLbs+=D.harvests[i].lbs;if(D.harvests[i].sold==="sold")totalInc+=D.harvests[i].total;}
   var html='<div class="sg3"><div class="sb"><div class="sv">'+D.hives.length+'</div><div class="slb">Hives</div></div><div class="sb"><div class="sv">'+totalLbs.toFixed(1)+'</div><div class="slb">lbs Harvested</div></div><div class="sb"><div class="sv pos">'+moneyS(totalInc)+'</div><div class="slb">Honey Income</div></div></div>';
   if(!D.hives.length)html+='<div class="empty"><div class="ei">🐝</div><div class="et">No hives. Tap + to add your first hive.</div></div>';
-  else{for(i=0;i<D.hives.length;i++){h=D.hives[i];lh=null;for(var j=0;j<D.harvests.length;j++){if(D.harvests[j].hiveId===h.id&&(!lh||D.harvests[j].date>lh.date))lh=D.harvests[j];}ni=h.inspected?new Date(new Date(h.inspected).getTime()+10*86400000).toISOString().slice(0,10):null;dI=du(ni);var cn=parseInt(h.strength)||0;var cbar=cn>0?'<div class="cbar">'+[1,2,3,4,5].map(function(n){return'<div class="cseg'+(n<=cn?" c"+n:"")+'" ></div>';}).join("")+'</div>':"";html+='<div class="hive-card" onclick="openHive(\''+h.id+'\')"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:5px"><div style="font-size:15px;font-weight:700;color:#E8C87A">🐝 '+esc(h.name)+'</div><span class="b '+(ni?(dI!==null&&dI<=0?"br":dI!==null&&dI<=3?"by":"bg"):"bb")+'">'+(ni?(dI!==null&&dI<=0?"INSPECT NOW":dI+"d"):"-")+'</span></div><div style="font-size:11px;color:#80A8C8">'+(h.location||"")+" | Queen: "+(h.queen||"Unknown")+'</div>'+cbar+'<div style="display:flex;justify-content:space-between;align-items:center;margin-top:8px"><div style="font-size:10px;color:#4A6888">Inspected: '+(h.inspected||"Never")+'</div><span class="rbtn" onclick="event.stopPropagation();openHarvest(\''+h.id+'\')">Log Harvest</span></div>'+(lh?'<div style="font-size:10px;color:#80A8C8;margin-top:3px">Last harvest: '+lh.date+" | "+lh.lbs+"lbs</div>":"")+'</div>';}}
+  else{for(i=0;i<D.hives.length;i++){h=D.hives[i];lh=null;for(var j=0;j<D.harvests.length;j++){if(D.harvests[j].hiveId===h.id&&(!lh||D.harvests[j].date>lh.date))lh=D.harvests[j];}ni=h.inspected?new Date(new Date(h.inspected).getTime()+10*86400000).toISOString().slice(0,10):null;dI=du(ni);var cn=parseInt(h.strength)||0;var cbar=cn>0?'<div class="cbar">'+[1,2,3,4,5].map(function(n){return'<div class="cseg'+(n<=cn?" c"+n:"")+'" ></div>';}).join("")+'</div>':"";html+='<div class="hive-card" onclick="openHive(\''+h.id+'\')"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:5px"><div style="font-size:15px;font-weight:700;color:#E8C87A">🐝 '+esc(h.name)+'</div><span class="b '+(ni?(dI!==null&&dI<=0?"br":dI!==null&&dI<=3?"by":"bg"):"bb")+'">'+(ni?(dI!==null&&dI<=0?"INSPECT NOW":dI+"d"):"-")+'</span></div><div style="font-size:11px;color:#9ABCDA">'+(h.location||"")+" | Queen: "+(h.queen||"Unknown")+'</div>'+cbar+'<div style="display:flex;justify-content:space-between;align-items:center;margin-top:8px"><div style="font-size:10px;color:#607898">Inspected: '+(h.inspected||"Never")+'</div><span class="rbtn" onclick="event.stopPropagation();openHarvest(\''+h.id+'\')">Log Harvest</span></div>'+(lh?'<div style="font-size:10px;color:#9ABCDA;margin-top:3px">Last harvest: '+lh.date+" | "+lh.lbs+"lbs</div>":"")+'</div>';}}
   if(D.harvests.length){html+='<div class="card"><div class="ct" style="margin-bottom:8px">Harvest History</div>';var sorted2=D.harvests.slice().sort(function(a,b){return b.date.localeCompare(a.date);});for(i=0;i<sorted2.length;i++){h=sorted2[i];var hive=null;for(var k=0;k<D.hives.length;k++){if(D.hives[k].id===h.hiveId){hive=D.hives[k];break;}}html+='<div class="ci"><div><div class="cd">'+esc(hive?hive.name:"Unknown")+" - "+h.lbs+"lbs @ $"+h.price+"/lb</div><div class='cc'>"+h.date+" - "+(h.sold==="sold"?"Sold":"Kept")+'</div></div><div class="ca '+(h.sold==="sold"?"inc":"")+'">'+( h.sold==="sold"?"+"+money(h.total):"kept")+'</div></div>';}html+='</div>';}
   pg.innerHTML=html;
 }
@@ -1090,7 +1104,7 @@ function rPastures(){
   else{for(i=0;i<D.pastures.length;i++){p=D.pastures[i];var cn=parseInt(p.condition)||0;var cbar=cn>0?'<div class="cbar">'+[1,2,3,4,5].map(function(n){return'<div class="cseg'+(n<=cn?" c"+n:"")+'" ></div>';}).join("")+'</div>':"";html+='<div class="li" onclick="openPasture(\''+p.id+'\')"><div class="le">🌿</div><div class="lm"><div class="ln">'+esc(p.name)+'</div><div class="ls">'+p.acres+' ac - '+p.head+' head - '+p.status+'</div>'+cbar+(p.notes?'<div class="en">'+esc(p.notes)+'</div>':'')+'</div><span class="b '+(p.status==="Grazing"?"bg":p.status==="Drought Stressed"?"br":"by")+'">'+p.status.split(" ")[0]+'</span></div>';}}
   html+='</div><div class="card"><div class="ch"><div class="ct">Rainfall Log</div><button class="btn bo bxs" onclick="sv(\'rn-date\',today());sv(\'rn-in\',\'\');sv(\'rn-notes\',\'\');openM(\'m-rain\')">+ Log</button></div>';
   var rains=D.rainfall.slice().sort(function(a,b){return b.date.localeCompare(a.date);}).slice(0,8);
-  if(!rains.length)html+='<div style="font-size:12px;color:#4A6888">No rainfall logged.</div>';
+  if(!rains.length)html+='<div style="font-size:12px;color:#607898">No rainfall logged.</div>';
   else{for(i=0;i<rains.length;i++){var r=rains[i];html+='<div class="ci"><div><div class="cd">'+r.inches+'" - '+r.date+'</div><div class="cc">'+(r.notes||"")+'</div></div></div>';}}
   html+='</div>';pg.innerHTML=html;
 }
@@ -1106,7 +1120,7 @@ function rCosts(){
   var groups={};for(i=0;i<filtered.length;i++){c=filtered[i];var m=(c.date||"").slice(0,7)||"Unknown";if(!groups[m])groups[m]=[];groups[m].push(c);}
   var gKeys=Object.keys(groups);gKeys.sort(function(a,b){return b.localeCompare(a);});
   var html=tlTabsHTML();
-  html+='<div class="banner"><div><div style="font-size:10px;text-transform:uppercase;color:#80A8C8">Net ('+tlLabel()+')</div><div class="bvv '+(net>=0?"pos":"neg")+'">'+money(Math.abs(net))+'</div></div><div style="text-align:right"><div style="font-size:10px;text-transform:uppercase;color:#80A8C8">Expenses</div><div style="font-size:13px;color:#80A8C8;font-weight:700">'+money(tExp)+'</div></div></div>';
+  html+='<div class="banner"><div><div style="font-size:10px;text-transform:uppercase;color:#9ABCDA">Net ('+tlLabel()+')</div><div class="bvv '+(net>=0?"pos":"neg")+'">'+money(Math.abs(net))+'</div></div><div style="text-align:right"><div style="font-size:10px;text-transform:uppercase;color:#9ABCDA">Expenses</div><div style="font-size:13px;color:#9ABCDA;font-weight:700">'+money(tExp)+'</div></div></div>';
   html+='<div class="chips" style="overflow-x:auto;flex-wrap:nowrap">';
   for(i=0;i<cats.length;i++)html+='<button class="chip'+(cats[i]===curCF?" on":"")+'" onclick="curCF=\''+cats[i]+'\';rCosts()">'+cats[i]+'</button>';
   html+='</div>';
@@ -1128,19 +1142,19 @@ function rFinance(){
   var sfKeys=Object.keys(sf);sfKeys.sort(function(a,b){return sf[b]-sf[a];});
   var html=tlTabsHTML();
   html+='<div class="sg"><div class="sb"><div class="sv '+(net>=0?"pos":"neg")+'">'+moneyS(Math.abs(net))+'</div><div class="slb">Net P&L</div></div><div class="sb"><div class="sv">'+moneyS(hVal+eVal)+'</div><div class="slb">Assets</div></div><div class="sb"><div class="sv neg">'+moneyS(lBal)+'</div><div class="slb">Loan Bal</div></div><div class="sb"><div class="sv neg">'+moneyS(mDebt)+'</div><div class="slb">Mo. Debt</div></div></div>';
-  html+='<div style="font-size:10px;color:#4A6888;text-align:center;margin:-6px 0 10px">'+tlLabel()+'</div>';
+  html+='<div style="font-size:10px;color:#607898;text-align:center;margin:-6px 0 10px">'+tlLabel()+'</div>';
   html+='<button class="btn bg2" style="margin-bottom:10px" onclick="openFinExport()">Export Finances</button>';
   html+='<div class="card"><div class="ct" style="margin-bottom:10px">6-Month P&amp;L</div>'+plBarChart()+'</div>';
   if(lVal>0)html+='<div class="ast warn">'+money(lVal)+' in animal losses may be deductible on Schedule F. Consult your accountant.</div>';
   var mFixed=tExp;var ac=Math.max(act.length,1);
   html+='<div class="card"><div class="ct" style="margin-bottom:8px">Break-Even per Animal</div>';
-  if(!act.length)html+='<div style="font-size:12px;color:#4A6888">Add animals with purchase price to calculate.</div>';
-  else{var shown=act.slice(0,6);for(i=0;i<shown.length;i++){var a=shown[i];var cost=(+a.purchase||0)+mFixed/ac;var wt=+a.weight||0;var be=wt>0?(cost/(wt/100)).toFixed(2):null;html+='<div style="padding:5px 0;border-bottom:1px solid rgba(201,149,106,.08)"><div style="display:flex;justify-content:space-between"><div style="font-size:13px;font-weight:700">'+esc(a.tag)+" ("+(a.weight||"?")+'lbs)</div>'+(be?'<div style="font-size:12px;color:#E8C87A;font-weight:700">$'+be+'/cwt</div>':'<div style="font-size:11px;color:#4A6888">No weight</div>')+'</div><div style="font-size:10px;color:#80A8C8">Invested: '+money(cost)+'</div></div>';}}
+  if(!act.length)html+='<div style="font-size:12px;color:#607898">Add animals with purchase price to calculate.</div>';
+  else{var shown=act.slice(0,6);for(i=0;i<shown.length;i++){var a=shown[i];var cost=(+a.purchase||0)+mFixed/ac;var wt=+a.weight||0;var be=wt>0?(cost/(wt/100)).toFixed(2):null;html+='<div style="padding:5px 0;border-bottom:1px solid rgba(201,149,106,.08)"><div style="display:flex;justify-content:space-between"><div style="font-size:13px;font-weight:700">'+esc(a.tag)+" ("+(a.weight||"?")+'lbs)</div>'+(be?'<div style="font-size:12px;color:#E8C87A;font-weight:700">$'+be+'/cwt</div>':'<div style="font-size:11px;color:#607898">No weight</div>')+'</div><div style="font-size:10px;color:#9ABCDA">Invested: '+money(cost)+'</div></div>';}}
   html+='</div><div class="card"><div class="ct" style="margin-bottom:8px">Schedule F ('+tlLabel()+')</div>';
-  if(!sfKeys.length)html+='<div style="font-size:12px;color:#4A6888">No expenses in this period.</div>';
+  if(!sfKeys.length)html+='<div style="font-size:12px;color:#607898">No expenses in this period.</div>';
   else{for(i=0;i<sfKeys.length;i++){var pct=tExp>0?Math.round(sf[sfKeys[i]]/tExp*100):0;html+='<div style="padding:4px 0"><div style="display:flex;justify-content:space-between;font-size:12px"><span>'+sfKeys[i]+'</span><span style="font-weight:700">'+money(sf[sfKeys[i]])+'</span></div><div class="pb"><div class="pf" style="width:'+pct+'%;background:#B84C2B"></div></div></div>';}}
   html+='</div><div class="card"><div class="ch"><div class="ct">Loans</div><button class="btn bo bxs" onclick="openLoan()">+ Add</button></div>';
-  if(!D.loans.length)html+='<div style="font-size:12px;color:#4A6888">No loans recorded.</div>';
+  if(!D.loans.length)html+='<div style="font-size:12px;color:#607898">No loans recorded.</div>';
   else{for(i=0;i<D.loans.length;i++){var ln=D.loans[i];html+='<div class="li" onclick="openLoan(\''+ln.id+'\')"><div class="le">🏦</div><div class="lm"><div class="ln">'+esc(ln.desc)+'</div><div class="ls">'+(ln.lender||"")+" - "+money(ln.pmt)+"/mo - "+ln.rate+'%</div></div><div class="lr"><div style="font-size:12px;color:#E88A6A;font-weight:700">'+moneyS(ln.bal)+'</div></div></div>';}}
   html+='</div>';pg.innerHTML=html;
 }
@@ -1162,14 +1176,14 @@ function rMarket(){
   var hasCattle=myTypes["Cattle"],hasHog=myTypes["Hog"],hasPoultry=0;
   for(i=0;i<POULTRY.length;i++){if(myTypes[POULTRY[i]]){hasPoultry=1;break;}}
   var hasBees=D.hives.length>0;
-  if(!Object.keys(myTypes).length&&!hasBees){pg.innerHTML='<div class="card"><div class="ct">Market Data</div><div style="font-size:12px;color:#4A6888;margin-top:8px">Add animals to see relevant market data.</div></div>';return;}
+  if(!Object.keys(myTypes).length&&!hasBees){pg.innerHTML='<div class="card"><div class="ct">Market Data</div><div style="font-size:12px;color:#607898;margin-top:8px">Add animals to see relevant market data.</div></div>';return;}
   var html='<div class="card"><div class="ct" style="margin-bottom:8px">Your Livestock Market</div>';
-  if(hasCattle||hasHog){html+='<div style="font-size:11px;font-weight:700;color:#E8C87A;margin-bottom:4px">West Auction - West TX (Every Thursday)</div><div style="font-size:11px;color:#4A6888;margin-bottom:8px">(254) 826-3725 - Cattle due before 10 AM</div><div id="wa"><div class="spin">Fetching prices...</div></div><button class="btn bo bsm" style="margin-top:8px" onclick="fetchWA()">Refresh</button>';}
+  if(hasCattle||hasHog){html+='<div style="font-size:11px;font-weight:700;color:#E8C87A;margin-bottom:4px">West Auction - West TX (Every Thursday)</div><div style="font-size:11px;color:#607898;margin-bottom:8px">(254) 826-3725 - Cattle due before 10 AM</div><div id="wa"><div class="spin">Fetching prices...</div></div><button class="btn bo bsm" style="margin-top:8px" onclick="fetchWA()">Refresh</button>';}
   if(hasPoultry){html+='<div style="font-size:11px;font-weight:700;color:#E8C87A;margin:12px 0 4px">Poultry - USDA Egg Prices</div><div id="egg-mkt"><div class="spin">Loading...</div></div>';}
   if(hasBees){var honeyInc=0,honeyLbs=0;for(i=0;i<D.harvests.length;i++){honeyLbs+=D.harvests[i].lbs;if(D.harvests[i].sold==="sold")honeyInc+=D.harvests[i].total;}var avgP=honeyLbs>0?(honeyInc/honeyLbs).toFixed(2):0;html+='<div style="font-size:11px;font-weight:700;color:#E8C87A;margin:12px 0 4px">Honey - Your Pricing</div><div class="mrow"><span style="font-size:12px">Avg Price/lb</span><span style="font-weight:700;color:#E8C87A">$'+avgP+'</span></div><div class="mrow"><span style="font-size:12px">Total Honey Income</span><span style="font-weight:700;color:#7EC89A">'+money(honeyInc)+'</span></div>';}
   html+='</div>';
   if(hasCattle||hasHog)html+='<div class="card"><div class="ct" style="margin-bottom:8px">Sell Signal Advisor</div><div id="ss"><div class="spin">Loading...</div></div></div>';
-  html+='<div class="card"><div class="ct" style="margin-bottom:8px">Seasonal Guide</div><div style="font-size:12px;color:#80A8C8;line-height:1.8"><div>Spring: Feeder prices rise - good for light stockers.</div><div>Summer: Prices soften. Drought can force liquidation.</div><div>Fall: Heavy calf run - prices dip. Hold if possible.</div><div>Winter: Bred cows and pairs trade strong.</div></div></div>';
+  html+='<div class="card"><div class="ct" style="margin-bottom:8px">Seasonal Guide</div><div style="font-size:12px;color:#9ABCDA;line-height:1.8"><div>Spring: Feeder prices rise - good for light stockers.</div><div>Summer: Prices soften. Drought can force liquidation.</div><div>Fall: Heavy calf run - prices dip. Hold if possible.</div><div>Winter: Bred cows and pairs trade strong.</div></div></div>';
   pg.innerHTML=html;
   if(hasCattle||hasHog)fetchWA();
   if(hasPoultry)fetchEggPrices();
@@ -1184,29 +1198,29 @@ function fetchWA(){
     var defs=[[/High Yielding Slaughter Bulls[^$]*\$([\d.]+)[^$]*\$([\d.]+)/i,"Slaughter Bulls (High)"],[/High Yielding Slaughter Cows[^$]*\$([\d.]+)[^$]*\$([\d.]+)/i,"Slaughter Cows (High)"],[/Medium Yielding Slaughter Cows[^$]*\$([\d.]+)[^$]*\$([\d.]+)/i,"Slaughter Cows (Med)"],[/Good Young Pair[^$]*\$([\d.]+)[^$]*\$([\d.]+)/i,"Young Pairs"],[/400#\s*-\s*500#[^$]*\$([\d.]+)[^$]*\$([\d.]+)/i,"Steers 400-500 lbs"],[/500#\s*-\s*600#[^$]*\$([\d.]+)[^$]*\$([\d.]+)/i,"Steers 500-600 lbs"]];
     var rows=[],i,m;for(i=0;i<defs.length;i++){m=txt.match(defs[i][0]);if(m)rows.push({label:defs[i][1],lo:m[1],hi:m[2]});}
     var head=txt.match(/TOTAL HEAD:\s*(\d+)/i),saleDate=txt.match(/sale of ([\d/]+)/i);
-    var html=(head?'<div style="font-size:11px;color:#80A8C8;margin-bottom:8px">Sale'+(saleDate?" of "+saleDate[1]:"")+': <strong style="color:#E8C87A">'+head[1]+' head</strong></div>':"");
+    var html=(head?'<div style="font-size:11px;color:#9ABCDA;margin-bottom:8px">Sale'+(saleDate?" of "+saleDate[1]:"")+': <strong style="color:#E8C87A">'+head[1]+' head</strong></div>':"");
     if(rows.length){for(i=0;i<rows.length;i++)html+='<div class="mrow"><div style="font-size:12px;font-weight:700">'+rows[i].label+'</div><div style="font-size:12px;color:#E8C87A;font-weight:700">$'+rows[i].lo+'-$'+rows[i].hi+'/cwt</div></div>';}
-    else html+='<div style="font-size:12px;color:#4A6888">Prices not parsed. <a href="https://www.westauction.us/marketreport.cfm" target="_blank" style="color:#E8C87A">View directly</a></div>';
-    html+='<div style="font-size:10px;color:#4A6888;margin-top:6px">westauction.us - '+new Date().toLocaleTimeString()+'</div>';
+    else html+='<div style="font-size:12px;color:#607898">Prices not parsed. <a href="https://www.westauction.us/marketreport.cfm" target="_blank" style="color:#E8C87A">View directly</a></div>';
+    html+='<div style="font-size:10px;color:#607898;margin-top:6px">westauction.us - '+new Date().toLocaleTimeString()+'</div>';
     if(waEl)waEl.innerHTML=html;
     rSellSigs(rows);
-  }).catch(function(){if(el("wa"))el("wa").innerHTML='<div style="font-size:12px;color:#4A6888">Offline. <a href="https://www.westauction.us/marketreport.cfm" target="_blank" style="color:#E8C87A">View West Auction</a></div>';});
+  }).catch(function(){if(el("wa"))el("wa").innerHTML='<div style="font-size:12px;color:#607898">Offline. <a href="https://www.westauction.us/marketreport.cfm" target="_blank" style="color:#E8C87A">View West Auction</a></div>';});
 }
 function fetchEggPrices(){
   var eEl=el("egg-mkt");if(!eEl)return;
   fetch("https://api.allorigins.win/get?url="+encodeURIComponent("https://www.ams.usda.gov/mnreports/em_egg001.txt"))
   .then(function(r){return r.json();})
   .then(function(json){
-    var txt=json.contents||"",lines=txt.split("\n"),html='<div style="font-size:11px;color:#80A8C8;margin-bottom:5px">USDA National Avg:</div>',found=false,i,l,p;
+    var txt=json.contents||"",lines=txt.split("\n"),html='<div style="font-size:11px;color:#9ABCDA;margin-bottom:5px">USDA National Avg:</div>',found=false,i,l,p;
     for(i=0;i<lines.length;i++){l=lines[i];if(l.toLowerCase().indexOf("large")>=0){p=l.match(/\d+\.\d+/g);if(p&&p.length){html+='<div class="mrow"><div style="font-size:11px">'+l.trim().slice(0,40)+'</div><div style="font-size:11px;color:#E8C87A;font-weight:700">$'+p[0]+'/doz</div></div>';found=true;}}}
-    if(!found)html+='<div style="font-size:12px;color:#4A6888"><a href="https://www.ams.usda.gov/mnreports/em_egg001.txt" target="_blank" style="color:#E8C87A">View USDA egg report</a></div>';
+    if(!found)html+='<div style="font-size:12px;color:#607898"><a href="https://www.ams.usda.gov/mnreports/em_egg001.txt" target="_blank" style="color:#E8C87A">View USDA egg report</a></div>';
     if(eEl)eEl.innerHTML=html;
-  }).catch(function(){if(el("egg-mkt"))el("egg-mkt").innerHTML='<div style="font-size:12px;color:#4A6888"><a href="https://www.ams.usda.gov" target="_blank" style="color:#E8C87A">USDA AMS</a></div>';});
+  }).catch(function(){if(el("egg-mkt"))el("egg-mkt").innerHTML='<div style="font-size:12px;color:#607898"><a href="https://www.ams.usda.gov" target="_blank" style="color:#E8C87A">USDA AMS</a></div>';});
 }
 function rSellSigs(rows){
   var ssEl=el("ss");if(!ssEl)return;
   var animals=[],i,a;for(i=0;i<actA().length;i++){a=actA()[i];if((a.type==="Cattle"||a.type==="Hog")&&+a.weight>0&&+a.purchase>0)animals.push(a);}
-  if(!animals.length){ssEl.innerHTML='<div style="font-size:12px;color:#4A6888">Add cattle or hog with weight and purchase price to see signals.</div>';return;}
+  if(!animals.length){ssEl.innerHTML='<div style="font-size:12px;color:#607898">Add cattle or hog with weight and purchase price to see signals.</div>';return;}
   var rc=costsInRange(),mFixed=0;for(i=0;i<rc.length;i++){if(rc[i].type==="expense")mFixed+=rc[i].amount;}
   var ac=Math.max(actA().length,1),mktHigh=null;
   if(rows){for(i=0;i<rows.length;i++){if(rows[i].label.indexOf("500")>=0){mktHigh=+rows[i].hi;break;}}}
@@ -1217,7 +1231,7 @@ function rSellSigs(rows){
     var sig=wd?"warn":(!mktHigh?"warn":mktHigh>(be*1.1)?"good":mktHigh>be?"warn":"bad");
     html+='<div class="sc '+sig+'"><div style="font-weight:700;font-size:13px">'+esc(a.tag)+" - "+a.weight+'lbs</div>';
     if(wd)html+='<div style="font-size:11px;color:#B84C2B;font-weight:700">WITHDRAWAL - not for sale until '+wd+'</div>';
-    html+='<div style="font-size:11px;color:#80A8C8">Break-even: '+(be?"$"+be.toFixed(2)+"/cwt":"?")+(mktHigh?" | Market: $"+mktHigh+"/cwt":"")+'</div>'+(profit!==null&&!wd?'<div style="font-size:12px;font-weight:700;color:'+(+profit>=0?"#7EC89A":"#E88A6A")+'">Est. '+(+profit>=0?"profit":"loss")+': '+(+profit>=0?"+":"")+"$"+profit+'</div>':"")+'</div>';
+    html+='<div style="font-size:11px;color:#9ABCDA">Break-even: '+(be?"$"+be.toFixed(2)+"/cwt":"?")+(mktHigh?" | Market: $"+mktHigh+"/cwt":"")+'</div>'+(profit!==null&&!wd?'<div style="font-size:12px;font-weight:700;color:'+(+profit>=0?"#7EC89A":"#E88A6A")+'">Est. '+(+profit>=0?"profit":"loss")+': '+(+profit>=0?"+":"")+"$"+profit+'</div>':"")+'</div>';
   }
   ssEl.innerHTML=html;
 }
@@ -1230,7 +1244,7 @@ function rContacts(){
   for(i=0;i<roles.length;i++)html+='<button class="chip'+(roles[i]===curConF?" on":"")+'" onclick="curConF=\''+roles[i]+'\';rContacts()">'+roles[i]+'</button>';
   html+='</div>';
   if(!filtered.length)html+='<div class="empty"><div class="ei">📞</div><div class="et">No contacts. Tap + to add your vet, feed store, neighbors...</div></div>';
-  else{for(i=0;i<filtered.length;i++){c=filtered[i];html+='<div class="citem"><div class="cav">'+(CI[c.role]||"📞")+'</div><div style="flex:1;min-width:0"><div style="font-weight:700;font-size:13px;color:#F5EDD8">'+esc(c.name)+'</div><div style="font-size:10px;color:#80A8C8">'+c.role+(c.biz?" - "+esc(c.biz):"")+'</div>'+(c.notes?'<div style="font-size:10px;color:#4A6888">'+esc(c.notes)+'</div>':'')+'</div><div style="display:flex;gap:5px">'+(c.phone?'<a href="tel:'+c.phone+'" style="width:30px;height:30px;border-radius:50%;border:1px solid rgba(201,149,106,.25);background:transparent;color:#80A8C8;font-size:13px;display:flex;align-items:center;justify-content:center;text-decoration:none">📱</a>':'')+(c.email?'<a href="mailto:'+c.email+'" style="width:30px;height:30px;border-radius:50%;border:1px solid rgba(201,149,106,.25);background:transparent;color:#80A8C8;font-size:13px;display:flex;align-items:center;justify-content:center;text-decoration:none">✉️</a>':'')+'<button onclick="openContact(\''+c.id+'\')" style="width:30px;height:30px;border-radius:50%;border:1px solid rgba(201,149,106,.25);background:transparent;color:#80A8C8;font-size:13px;cursor:pointer">✏️</button></div></div>';}}
+  else{for(i=0;i<filtered.length;i++){c=filtered[i];html+='<div class="citem"><div class="cav">'+(CI[c.role]||"📞")+'</div><div style="flex:1;min-width:0"><div style="font-weight:700;font-size:13px;color:#F5EDD8">'+esc(c.name)+'</div><div style="font-size:10px;color:#9ABCDA">'+c.role+(c.biz?" - "+esc(c.biz):"")+'</div>'+(c.notes?'<div style="font-size:10px;color:#607898">'+esc(c.notes)+'</div>':'')+'</div><div style="display:flex;gap:5px">'+(c.phone?'<a href="tel:'+c.phone+'" style="width:30px;height:30px;border-radius:50%;border:1px solid rgba(201,149,106,.25);background:transparent;color:#9ABCDA;font-size:13px;display:flex;align-items:center;justify-content:center;text-decoration:none">📱</a>':'')+(c.email?'<a href="mailto:'+c.email+'" style="width:30px;height:30px;border-radius:50%;border:1px solid rgba(201,149,106,.25);background:transparent;color:#9ABCDA;font-size:13px;display:flex;align-items:center;justify-content:center;text-decoration:none">✉️</a>':'')+'<button onclick="openContact(\''+c.id+'\')" style="width:30px;height:30px;border-radius:50%;border:1px solid rgba(201,149,106,.25);background:transparent;color:#9ABCDA;font-size:13px;cursor:pointer">✏️</button></div></div>';}}
   pg.innerHTML=html;
 }
 
@@ -1242,15 +1256,15 @@ function rLosses(){
   if(tVal>0)html+='<div class="ast warn">'+money(tVal)+' in losses may be deductible on Schedule F. Document with vet statements. Consult your accountant.</div>';
   html+='<div class="card"><div class="ct" style="margin-bottom:8px">Loss Records</div>';
   if(!D.losses.length)html+='<div class="empty"><div class="ei">📋</div><div class="et">No losses recorded.</div></div>';
-  else{var sorted=D.losses.slice().sort(function(a,b){return(b.ts||0)-(a.ts||0);});for(i=0;i<sorted.length;i++){l=sorted[i];html+='<div class="litem" onclick="openLoss(\''+l.id+'\')"><div style="display:flex;justify-content:space-between;align-items:flex-start"><div style="font-weight:700;font-size:13px">'+(EMJ[l.animalType]||"")+" "+esc(l.tag)+'</div><span class="b '+(l.lossType==="Culled"?"by":"br")+'">'+l.lossType+'</span></div><div style="font-size:11px;color:#80A8C8;margin-top:2px">'+(l.date||"")+(l.weight?" - "+l.weight+"lbs":"")+(l.notes?" - "+esc(l.notes.slice(0,50)):"")+'</div><div style="display:flex;gap:10px;margin-top:3px">'+(l.value?'<span style="font-size:11px;color:#E88A6A">Loss: '+money(l.value)+'</span>':'')+(l.payout?'<span style="font-size:11px;color:#7EC89A">Payout: '+money(l.payout)+'</span>':'')+(l.insurance&&l.insurance!=="none"?'<span style="font-size:10px;color:#4A6888">Ins: '+l.insurance+'</span>':'')+'</div></div>';}}
+  else{var sorted=D.losses.slice().sort(function(a,b){return(b.ts||0)-(a.ts||0);});for(i=0;i<sorted.length;i++){l=sorted[i];html+='<div class="litem" onclick="openLoss(\''+l.id+'\')"><div style="display:flex;justify-content:space-between;align-items:flex-start"><div style="font-weight:700;font-size:13px">'+(EMJ[l.animalType]||"")+" "+esc(l.tag)+'</div><span class="b '+(l.lossType==="Culled"?"by":"br")+'">'+l.lossType+'</span></div><div style="font-size:11px;color:#9ABCDA;margin-top:2px">'+(l.date||"")+(l.weight?" - "+l.weight+"lbs":"")+(l.notes?" - "+esc(l.notes.slice(0,50)):"")+'</div><div style="display:flex;gap:10px;margin-top:3px">'+(l.value?'<span style="font-size:11px;color:#E88A6A">Loss: '+money(l.value)+'</span>':'')+(l.payout?'<span style="font-size:11px;color:#7EC89A">Payout: '+money(l.payout)+'</span>':'')+(l.insurance&&l.insurance!=="none"?'<span style="font-size:10px;color:#607898">Ins: '+l.insurance+'</span>':'')+'</div></div>';}}
   html+='</div>';pg.innerHTML=html;
 }
 
 function rWeather(){
   var pg=el("pg-weather");if(!pg)return;setFAB(null);
   pg.innerHTML='<div class="card"><div class="ch"><div class="ct">USDA Drought Monitor</div><button class="btn bo bxs" onclick="sv(\'cn-fips\',\''+county.fips+'\');sv(\'cn-name\',\''+county.name+'\');openM(\'m-county\')">'+county.name+' Co.</button></div><div id="dw"><div class="spin">Loading...</div></div></div>'
-  +'<div class="card"><div class="ch"><div class="ct">7-Day Forecast</div><span style="font-size:10px;color:#4A6888">Burleson TX</span></div><div id="fw"><div class="spin">Loading...</div></div></div>'
-  +'<div class="card"><div class="ct" style="margin-bottom:8px">Drought Impact Guide</div><div style="font-size:12px;color:#80A8C8;line-height:1.8"><div>None/D0: Normal ops. Build hay reserves.</div><div>D1 Moderate: Destock 10-15%. Supplement early.</div><div>D2 Severe: Reduce herd 20-30%. Cull open cows.</div><div>D3 Extreme: Emergency destocking. Contact FSA.</div><div>D4 Exceptional: Full liquidation may be needed.</div></div></div>';
+  +'<div class="card"><div class="ch"><div class="ct">7-Day Forecast</div><span style="font-size:10px;color:#607898">Burleson TX</span></div><div id="fw"><div class="spin">Loading...</div></div></div>'
+  +'<div class="card"><div class="ct" style="margin-bottom:8px">Drought Impact Guide</div><div style="font-size:12px;color:#9ABCDA;line-height:1.8"><div>None/D0: Normal ops. Build hay reserves.</div><div>D1 Moderate: Destock 10-15%. Supplement early.</div><div>D2 Severe: Reduce herd 20-30%. Cull open cows.</div><div>D3 Extreme: Emergency destocking. Contact FSA.</div><div>D4 Exceptional: Full liquidation may be needed.</div></div></div>';
   fetchDrought();fetchForecast();
 }
 function fetchDrought(){
@@ -1260,14 +1274,14 @@ function fetchDrought(){
   fetch("https://api.allorigins.win/get?url="+encodeURIComponent(url))
   .then(function(r){return r.json();})
   .then(function(json){
-    var data=JSON.parse(json.contents||"[]");if(!data.length){if(dwEl)dwEl.innerHTML='<div style="font-size:12px;color:#4A6888">No data. <a href="https://drought.gov/states/texas" target="_blank" style="color:#E8C87A">View USDA</a></div>';return;}
+    var data=JSON.parse(json.contents||"[]");if(!data.length){if(dwEl)dwEl.innerHTML='<div style="font-size:12px;color:#607898">No data. <a href="https://drought.gov/states/texas" target="_blank" style="color:#E8C87A">View USDA</a></div>';return;}
     var latest=data[data.length-1],d4=+(latest.D4||0),d3=+(latest.D3||0),d2=+(latest.D2||0),d1=+(latest.D1||0),d0=+(latest.D0||0);
     var worst=d4>5?4:d3>5?3:d2>10?2:d1>10?1:d0>10?0:-1;
     var labels=["None","D0 Abnormally Dry","D1 Moderate Drought","D2 Severe Drought","D3 Extreme Drought","D4 Exceptional Drought"];
     var cls=["dr0","dr1","dr1","dr2","dr3","dr4"];
     var advice=["All clear.","Becoming dry. Monitor hay and water.","Moderate drought. Reduce stocking 10-15%.","Severe. Cull open cows. Check water daily.","Extreme. Emergency destocking. Contact FSA.","Exceptional drought. Contact USDA FSA immediately."];
-    if(dwEl)dwEl.innerHTML='<div class="drlevel '+cls[worst+1]+'"><div style="font-weight:700;font-size:15px;margin-bottom:3px">'+labels[worst+1]+'</div><div style="font-size:11px;color:#80A8C8">'+county.name+' County - '+(latest.MapDate||"")+'</div><div style="font-size:11px;margin-top:8px;line-height:1.5;padding:8px;background:rgba(0,0,0,.2);border-radius:5px">'+advice[worst+1]+'</div></div><div style="font-size:10px;color:#4A6888;margin-top:5px">D0:'+d0.toFixed(0)+'% D1:'+d1.toFixed(0)+'% D2:'+d2.toFixed(0)+'% D3:'+d3.toFixed(0)+'% D4:'+d4.toFixed(0)+'% - USDA/NDMC updated Thursdays</div>';
-  }).catch(function(){if(el("dw"))el("dw").innerHTML='<div style="font-size:12px;color:#4A6888">Could not load. <a href="https://drought.gov/states/texas" target="_blank" style="color:#E8C87A">View USDA</a></div>';});
+    if(dwEl)dwEl.innerHTML='<div class="drlevel '+cls[worst+1]+'"><div style="font-weight:700;font-size:15px;margin-bottom:3px">'+labels[worst+1]+'</div><div style="font-size:11px;color:#9ABCDA">'+county.name+' County - '+(latest.MapDate||"")+'</div><div style="font-size:11px;margin-top:8px;line-height:1.5;padding:8px;background:rgba(0,0,0,.2);border-radius:5px">'+advice[worst+1]+'</div></div><div style="font-size:10px;color:#607898;margin-top:5px">D0:'+d0.toFixed(0)+'% D1:'+d1.toFixed(0)+'% D2:'+d2.toFixed(0)+'% D3:'+d3.toFixed(0)+'% D4:'+d4.toFixed(0)+'% - USDA/NDMC updated Thursdays</div>';
+  }).catch(function(){if(el("dw"))el("dw").innerHTML='<div style="font-size:12px;color:#607898">Could not load. <a href="https://drought.gov/states/texas" target="_blank" style="color:#E8C87A">View USDA</a></div>';});
 }
 function fetchForecast(){
   var fwEl=el("fw");if(!fwEl)return;
@@ -1281,9 +1295,9 @@ function fetchForecast(){
     var iKeys=Object.keys(icons);
     function gi(n){for(var ii=0;ii<iKeys.length;ii++){if(n.indexOf(iKeys[ii])>=0)return icons[iKeys[ii]];}return"🌡️";}
     for(i=0;i<Math.min(periods.length,7);i++){p=periods[i];html+='<div class="wxd"><div class="dn">'+p.name.slice(0,3)+'</div><div class="di">'+gi(p.shortForecast)+'</div><div class="dt">'+p.temperature+"°"+p.temperatureUnit+'</div><div class="ds">'+p.shortForecast.slice(0,10)+'</div></div>';}
-    html+='</div><div style="font-size:10px;color:#4A6888;margin-top:4px">NWS - Burleson TX</div>';
+    html+='</div><div style="font-size:10px;color:#607898;margin-top:4px">NWS - Burleson TX</div>';
     if(fwEl)fwEl.innerHTML=html;
-  }).catch(function(){if(el("fw"))el("fw").innerHTML='<div style="font-size:12px;color:#4A6888">Forecast unavailable. <a href="https://forecast.weather.gov" target="_blank" style="color:#E8C87A">View NWS</a></div>';});
+  }).catch(function(){if(el("fw"))el("fw").innerHTML='<div style="font-size:12px;color:#607898">Forecast unavailable. <a href="https://forecast.weather.gov" target="_blank" style="color:#E8C87A">View NWS</a></div>';});
 }
 
 function rGoals(){
@@ -1295,25 +1309,25 @@ function rGoals(){
   for(i=0;i<D.costs.length;i++){c=D.costs[i];if(c.type==="income"){allInc+=c.amount;if((c.date||"")>=sixAgo)recentInc+=c.amount;}}
   var avgMonthly=recentInc/6;
   var html='<div class="card"><div class="ch"><div class="ct">Income Goal</div><button class="btn bo bxs" onclick="openGoalsModal()">'+(target?"Edit":"Set Goal")+'</button></div>';
-  if(!target){html+='<div style="font-size:12px;color:#4A6888;margin-bottom:10px">No goal set yet. Tap Set Goal when you are ready.</div>';if(allInc>0)html+='<div class="ast info">All-time ranch income logged: <strong>'+money(allInc)+'</strong>. Keep logging and set a goal once you have a few months of data.</div>';html+='</div>';pg.innerHTML=html;return;}
+  if(!target){html+='<div style="font-size:12px;color:#607898;margin-bottom:10px">No goal set yet. Tap Set Goal when you are ready.</div>';if(allInc>0)html+='<div class="ast info">All-time ranch income logged: <strong>'+money(allInc)+'</strong>. Keep logging and set a goal once you have a few months of data.</div>';html+='</div>';pg.innerHTML=html;return;}
   var pct=target>0?Math.min(100,Math.round(avgMonthly/target*100)):0;
   html+='<div style="font-size:13px;color:#F5EDD8;margin-bottom:8px">'+(goals.notes?esc(goals.notes):"Monthly income target")+'</div>';
-  html+='<div style="display:flex;justify-content:space-between;font-size:12px;margin-bottom:4px"><span style="color:#80A8C8">6-mo avg/mo</span><span style="font-weight:700;color:#7EC89A">'+money(avgMonthly)+'</span></div>';
-  html+='<div style="display:flex;justify-content:space-between;font-size:12px;margin-bottom:8px"><span style="color:#80A8C8">Target/mo</span><span style="font-weight:700;color:#E8C87A">'+money(target)+'</span></div>';
+  html+='<div style="display:flex;justify-content:space-between;font-size:12px;margin-bottom:4px"><span style="color:#9ABCDA">6-mo avg/mo</span><span style="font-weight:700;color:#7EC89A">'+money(avgMonthly)+'</span></div>';
+  html+='<div style="display:flex;justify-content:space-between;font-size:12px;margin-bottom:8px"><span style="color:#9ABCDA">Target/mo</span><span style="font-weight:700;color:#E8C87A">'+money(target)+'</span></div>';
   html+='<div class="pb" style="height:12px;margin-bottom:6px"><div class="pf" style="width:'+pct+'%;background:'+(pct>=100?"#4A7C59":pct>=60?"#D4A032":"#B84C2B")+'"></div></div>';
-  html+='<div style="font-size:11px;color:#4A6888;text-align:center;margin-bottom:8px">'+pct+'% of goal - based on last 6 months</div>';
+  html+='<div style="font-size:11px;color:#607898;text-align:center;margin-bottom:8px">'+pct+'% of goal - based on last 6 months</div>';
   if(avgMonthly>=target){html+='<div class="ast ok">You have reached your income goal! Current 6-mo avg: '+money(avgMonthly)+'/mo</div>';}
   else if(avgMonthly>0&&annualGrowth>0){var mToGoal=Math.ceil(Math.log(target/avgMonthly)/Math.log(1+monthlyGrowth));var yr=Math.floor(mToGoal/12),mo=mToGoal%12;html+='<div style="font-size:13px;color:#F5EDD8;line-height:1.6;padding:10px;background:rgba(212,160,50,.08);border-radius:6px;border:1px solid rgba(212,160,50,.25)">At <strong style="color:#D4A032">'+Math.round(annualGrowth*100)+'% annual growth</strong>, you reach '+money(target)+'/mo in approximately <strong style="color:#7EC89A">'+(yr>0?yr+"yr ":"")+(mo>0?mo+"mo":"")+'('+mToGoal+' months)</strong>.</div>';}
   html+='</div><div class="card"><div class="ct" style="margin-bottom:8px">5-Year Projection</div>';
-  html+='<div style="font-size:11px;color:#4A6888;margin-bottom:10px">Starting from '+money(avgMonthly)+'/mo at '+Math.round(annualGrowth*100)+'%/yr growth</div>';
-  if(avgMonthly>0){for(var y=1;y<=5;y++){var projMo=avgMonthly*Math.pow(1+annualGrowth,y);var projAnn=projMo*12;var hit=projMo>=target&&target>0;html+='<div class="proj-row"><div style="font-size:12px;font-weight:700;color:#E8C87A">Year '+y+(hit?" 🎯":"")+'</div><div style="text-align:right"><span style="font-size:12px;color:#7EC89A">'+money(projMo)+'/mo</span><span style="font-size:10px;color:#4A6888;margin-left:6px">('+money(projAnn)+'/yr)</span></div></div>';}}
-  else html+='<div style="font-size:12px;color:#4A6888">Log income transactions to see projections.</div>';
+  html+='<div style="font-size:11px;color:#607898;margin-bottom:10px">Starting from '+money(avgMonthly)+'/mo at '+Math.round(annualGrowth*100)+'%/yr growth</div>';
+  if(avgMonthly>0){for(var y=1;y<=5;y++){var projMo=avgMonthly*Math.pow(1+annualGrowth,y);var projAnn=projMo*12;var hit=projMo>=target&&target>0;html+='<div class="proj-row"><div style="font-size:12px;font-weight:700;color:#E8C87A">Year '+y+(hit?" 🎯":"")+'</div><div style="text-align:right"><span style="font-size:12px;color:#7EC89A">'+money(projMo)+'/mo</span><span style="font-size:10px;color:#607898;margin-left:6px">('+money(projAnn)+'/yr)</span></div></div>';}}
+  else html+='<div style="font-size:12px;color:#607898">Log income transactions to see projections.</div>';
   html+='</div>';
   var calvingCount=0;for(i=0;i<D.breeding.length;i++){if(D.breeding[i].status==="Calved")calvingCount++;}
   var currentCattle=actByType("Cattle").length;
-  if(currentCattle>0){var annualCalves=calvingCount>0?Math.round(calvingCount*0.85):Math.round(currentCattle*0.7);html+='<div class="card"><div class="ct" style="margin-bottom:8px">Cattle Herd Projection</div><div style="font-size:11px;color:#4A6888;margin-bottom:8px">'+currentCattle+' head | ~'+annualCalves+' calves/yr estimated</div>';var herd=currentCattle;for(var y2=1;y2<=5;y2++){herd+=annualCalves;html+='<div class="proj-row"><div style="font-size:12px;font-weight:700;color:#E8C87A">Year '+y2+'</div><div style="font-size:12px;color:#F5EDD8">~'+herd+' head</div></div>';}html+='<div style="font-size:10px;color:#4A6888;margin-top:6px">Assumes ~85% calf survival.</div></div>';}
+  if(currentCattle>0){var annualCalves=calvingCount>0?Math.round(calvingCount*0.85):Math.round(currentCattle*0.7);html+='<div class="card"><div class="ct" style="margin-bottom:8px">Cattle Herd Projection</div><div style="font-size:11px;color:#607898;margin-bottom:8px">'+currentCattle+' head | ~'+annualCalves+' calves/yr estimated</div>';var herd=currentCattle;for(var y2=1;y2<=5;y2++){herd+=annualCalves;html+='<div class="proj-row"><div style="font-size:12px;font-weight:700;color:#E8C87A">Year '+y2+'</div><div style="font-size:12px;color:#F5EDD8">~'+herd+' head</div></div>';}html+='<div style="font-size:10px;color:#607898;margin-top:6px">Assumes ~85% calf survival.</div></div>';}
   var hiveCount=D.hives.length;
-  if(hiveCount>0){var totalHLbs=0,soldHLbs=0,soldHInc=0;for(i=0;i<D.harvests.length;i++){totalHLbs+=D.harvests[i].lbs;if(D.harvests[i].sold==="sold"){soldHLbs+=D.harvests[i].lbs;soldHInc+=D.harvests[i].total;}}var avgLbs=totalHLbs>0?(totalHLbs/hiveCount):0;var avgP2=soldHLbs>0?(soldHInc/soldHLbs):0;html+='<div class="card"><div class="ct" style="margin-bottom:8px">Apiary Projection</div><div style="font-size:11px;color:#4A6888;margin-bottom:8px">'+hiveCount+' hives'+(avgLbs>0?" | avg "+avgLbs.toFixed(1)+"lbs/hive":"")+(avgP2>0?" | $"+avgP2.toFixed(2)+"/lb avg":"")+'</div>';if(avgLbs>0&&avgP2>0){var hives=hiveCount;for(var y3=1;y3<=5;y3++){hives=Math.round(hives*1.2);var projH=hives*avgLbs*avgP2;html+='<div class="proj-row"><div style="font-size:12px;font-weight:700;color:#E8C87A">Year '+y3+'</div><div style="font-size:12px;color:#F5EDD8">~'+hives+' hives | <span style="color:#7EC89A">'+money(projH)+'</span></div></div>';}html+='<div style="font-size:10px;color:#4A6888;margin-top:6px">Assumes 20% annual hive growth.</div>';}else html+='<div style="font-size:12px;color:#4A6888">Log honey harvests with pricing to see projections.</div>';html+='</div>';}
+  if(hiveCount>0){var totalHLbs=0,soldHLbs=0,soldHInc=0;for(i=0;i<D.harvests.length;i++){totalHLbs+=D.harvests[i].lbs;if(D.harvests[i].sold==="sold"){soldHLbs+=D.harvests[i].lbs;soldHInc+=D.harvests[i].total;}}var avgLbs=totalHLbs>0?(totalHLbs/hiveCount):0;var avgP2=soldHLbs>0?(soldHInc/soldHLbs):0;html+='<div class="card"><div class="ct" style="margin-bottom:8px">Apiary Projection</div><div style="font-size:11px;color:#607898;margin-bottom:8px">'+hiveCount+' hives'+(avgLbs>0?" | avg "+avgLbs.toFixed(1)+"lbs/hive":"")+(avgP2>0?" | $"+avgP2.toFixed(2)+"/lb avg":"")+'</div>';if(avgLbs>0&&avgP2>0){var hives=hiveCount;for(var y3=1;y3<=5;y3++){hives=Math.round(hives*1.2);var projH=hives*avgLbs*avgP2;html+='<div class="proj-row"><div style="font-size:12px;font-weight:700;color:#E8C87A">Year '+y3+'</div><div style="font-size:12px;color:#F5EDD8">~'+hives+' hives | <span style="color:#7EC89A">'+money(projH)+'</span></div></div>';}html+='<div style="font-size:10px;color:#607898;margin-top:6px">Assumes 20% annual hive growth.</div>';}else html+='<div style="font-size:12px;color:#607898">Log honey harvests with pricing to see projections.</div>';html+='</div>';}
   pg.innerHTML=html;
 }
 
@@ -1326,11 +1340,11 @@ function rAlerts(){
   if(!alerts.length)html+='<div class="ast ok">All clear - no active alerts.</div>';
   else{for(i=0;i<alerts.length;i++)html+='<div class="ast '+alerts[i].cls+'">'+alerts[i].msg+'</div>';}
   html+='</div><div class="card"><div class="ch"><div class="ct">Next 14 Days</div><button class="btn bo bxs" onclick="sv(\'rm-date\',today());sv(\'rm-label\',\'\');openM(\'m-reminder\')">+ Add</button></div>';
-  if(!upcoming.length)html+='<div style="font-size:12px;color:#4A6888">No upcoming reminders.</div>';
-  else{for(i=0;i<upcoming.length;i++){r=upcoming[i];d=du(r.date);html+='<div class="nr"><div><div style="font-size:13px;font-weight:700">'+esc(r.label)+'</div><div style="font-size:10px;color:#80A8C8">'+r.date+'</div></div><span class="b '+(d<=0?"br":d<=3?"by":"bg")+'">'+(d<=0?"TODAY":d+"d")+'</span></div>';}}
+  if(!upcoming.length)html+='<div style="font-size:12px;color:#607898">No upcoming reminders.</div>';
+  else{for(i=0;i<upcoming.length;i++){r=upcoming[i];d=du(r.date);html+='<div class="nr"><div><div style="font-size:13px;font-weight:700">'+esc(r.label)+'</div><div style="font-size:10px;color:#9ABCDA">'+r.date+'</div></div><span class="b '+(d<=0?"br":d<=3?"by":"bg")+'">'+(d<=0?"TODAY":d+"d")+'</span></div>';}}
   html+='</div>';
-  if(future.length){html+='<div class="card"><div class="ct" style="margin-bottom:8px">Upcoming</div>';for(i=0;i<Math.min(future.length,8);i++){r=future[i];html+='<div class="nr"><div><div style="font-size:13px;font-weight:700">'+esc(r.label)+'</div><div style="font-size:10px;color:#80A8C8">'+r.date+'</div></div><span class="b bb">'+du(r.date)+'d</span></div>';}html+='</div>';}
-  html+='<div class="card"><div class="ct" style="margin-bottom:8px">Push Notifications</div><p style="font-size:12px;color:#80A8C8;margin-bottom:10px">Works best when added to Home Screen on Android.</p><button class="btn bp" onclick="if(\'Notification\'in window)Notification.requestPermission().then(function(p){alert(p===\'granted\'?\'Notifications enabled!\':\'Enable in browser settings.\');});else alert(\'Not supported.\')">Enable Notifications</button></div>';
+  if(future.length){html+='<div class="card"><div class="ct" style="margin-bottom:8px">Upcoming</div>';for(i=0;i<Math.min(future.length,8);i++){r=future[i];html+='<div class="nr"><div><div style="font-size:13px;font-weight:700">'+esc(r.label)+'</div><div style="font-size:10px;color:#9ABCDA">'+r.date+'</div></div><span class="b bb">'+du(r.date)+'d</span></div>';}html+='</div>';}
+  html+='<div class="card"><div class="ct" style="margin-bottom:8px">Push Notifications</div><p style="font-size:12px;color:#9ABCDA;margin-bottom:10px">Works best when added to Home Screen on Android.</p><button class="btn bp" onclick="if(\'Notification\'in window)Notification.requestPermission().then(function(p){alert(p===\'granted\'?\'Notifications enabled!\':\'Enable in browser settings.\');});else alert(\'Not supported.\')">Enable Notifications</button></div>';
   pg.innerHTML=html;
 }
 
@@ -1346,7 +1360,7 @@ function boot(){
 window.onload=function(){
   try{boot();}
   catch(e){
-    document.body.innerHTML='<div style="padding:30px;color:#E8C87A;background:#101824;min-height:100vh;font-family:Georgia,serif"><h2 style="margin-bottom:16px">Towne Ranch v9</h2><p style="color:#E88A6A;margin-bottom:8px">Error: '+e.message+'</p><p style="font-size:12px;color:#4A6888">Please reload the page.</p></div>';
+    document.body.innerHTML='<div style="padding:30px;color:#E8C87A;background:#060C16;min-height:100vh;font-family:Georgia,serif"><h2 style="margin-bottom:16px">Towne Ranch v9</h2><p style="color:#E88A6A;margin-bottom:8px">Error: '+e.message+'</p><p style="font-size:12px;color:#607898">Please reload the page.</p></div>';
   }
 };
 
