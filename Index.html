@@ -202,6 +202,13 @@ input:focus,select:focus,textarea:focus{border-color:rgba(212,160,50,.55);box-sh
 .nav{border-bottom:1px solid rgba(212,160,50,.15)}
 input,select,textarea{color:#F5EDD8;border:1px solid rgba(201,149,106,.22)}
 input:focus,select:focus,textarea:focus{border-color:rgba(212,160,50,.7);box-shadow:0 0 0 3px rgba(212,160,50,.12)}
+.chore-row{display:-webkit-box;display:-webkit-flex;display:flex;-webkit-box-align:center;-webkit-align-items:center;align-items:center;gap:10px;padding:10px 6px;border-bottom:1px solid rgba(201,149,106,.08);cursor:pointer;-webkit-transition:background .12s;transition:background .12s}
+.chore-row:active{background:rgba(212,160,50,.07)}
+.chore-ck{width:28px;height:28px;border-radius:50%;border:2px solid rgba(201,149,106,.35);-webkit-flex-shrink:0;flex-shrink:0;position:relative;-webkit-transition:background .15s,border-color .15s;transition:background .15s,border-color .15s}
+.chore-ck.done{background:#4A7C59;border-color:#4A7C59}
+.chore-ck.done:before{content:"✓";position:absolute;top:50%;left:50%;-webkit-transform:translate(-50%,-50%);transform:translate(-50%,-50%);color:#F5EDD8;font-size:14px;font-weight:900;line-height:1}
+.chore-lbl{-webkit-box-flex:1;-webkit-flex:1;flex:1;font-size:13px;color:#F5EDD8;-webkit-transition:color .15s;transition:color .15s}
+.chore-lbl.done{color:#607898;text-decoration:line-through}
 
 </style>
 </head>
@@ -450,6 +457,33 @@ input:focus,select:focus,textarea:focus{border-color:rgba(212,160,50,.7);box-sha
 <p id="conf-msg" style="font-size:13px;color:#9ABCDA;margin-bottom:16px;line-height:1.6"></p>
 <div class="g2"><button class="btn bo" onclick="closeM('m-confirm')">Cancel</button><button class="btn bd" id="conf-ok">Confirm</button></div>
 </div></div>
+<!-- CHORE -->
+<div class="mo" id="m-chore"><div class="mb">
+<div class="mt" id="mch-ttl">Add Chore</div><input type="hidden" id="ch-id">
+<div class="fg"><label>Chore</label><input id="ch-label" placeholder="Feed cattle, check water troughs..."></div>
+<div class="g2">
+<div class="fg"><label>Frequency</label><select id="ch-freq"><option value="daily">Daily</option><option value="weekly">Weekly</option><option value="monthly">Monthly</option></select></div>
+<div class="fg"><label>Category</label><select id="ch-cat"><option value="animals">🐄 Animals</option><option value="equipment">🚜 Equipment</option><option value="property">🏡 Property</option><option value="other">📝 Other</option></select></div>
+</div>
+<div class="g2" style="margin-top:8px"><button class="btn bo" onclick="closeM('m-chore')">Cancel</button><button class="btn bp" onclick="saveChore()">Save</button></div>
+<div id="ch-del-wrap" style="margin-top:7px;display:none"><button class="btn bd" onclick="delChore()">Remove Chore</button></div>
+</div></div>
+<!-- HAY -->
+<div class="mo" id="m-hay"><div class="mb">
+<div class="mt" id="mhy-ttl">Add Hay / Forage</div><input type="hidden" id="hy-id">
+<div class="g2">
+<div class="fg"><label>Hay Type</label><select id="hy-type"><option>Coastal</option><option>Bermuda</option><option>Alfalfa</option><option>Mixed Grass</option><option>Prairie</option><option>Sudan</option><option>Other</option></select></div>
+<div class="fg"><label>Form</label><select id="hy-form" onchange="autoHayLbs()"><option value="Small Square">Small Square (~50 lbs)</option><option value="Large Square">Large Square (~800 lbs)</option><option value="Round Bale">Round Bale (~1,200 lbs)</option></select></div>
+</div>
+<div class="g2">
+<div class="fg"><label>Bale Count</label><input type="number" id="hy-count" placeholder="0"></div>
+<div class="fg"><label>Lbs per Bale</label><input type="number" id="hy-lbs" placeholder="1200"></div>
+</div>
+<div class="fg"><label>Cost per Bale $</label><input type="number" id="hy-cost" placeholder="0.00" step="0.01"></div>
+<div class="fg"><label>Notes</label><input id="hy-notes" placeholder="Supplier, quality, cutting..."></div>
+<div class="g2" style="margin-top:8px"><button class="btn bo" onclick="closeM('m-hay')">Cancel</button><button class="btn bp" onclick="saveHay()">Save</button></div>
+<div id="hy-del-wrap" style="margin-top:7px;display:none"><button class="btn bd" onclick="delHay()">Remove</button></div>
+</div></div>
 <!-- TOAST -->
 <div id="toast"></div>
 
@@ -466,7 +500,7 @@ var HB={Healthy:"bg",Monitor:"by",Sick:"br",Pregnant:"bb",Sold:"by",Deceased:"br
 var CI={"Veterinarian":"🩺","Feed Store":"🌾","Farrier":"🐴","Brand Inspector":"🏷","Trucker / Hauler":"🚛","Sale Barn":"🏟","Neighbor / Rancher":"🤠","Lender / Bank":"🏦","Insurance Agent":"📋","Extension Agent":"🎓","Other":"📞"};
 
 // ── DATA ──
-var D={animals:[],costs:[],weights:[],vax:[],breeding:[],feed:[],equipment:[],pastures:[],rainfall:[],reminders:[],loans:[],contacts:[],losses:[],photos:[],docs:[],hives:[],harvests:[],eggs:[],goals:{target:0,growth:15,notes:""}};
+var D={animals:[],costs:[],weights:[],vax:[],breeding:[],feed:[],equipment:[],pastures:[],rainfall:[],reminders:[],loans:[],contacts:[],losses:[],photos:[],docs:[],hives:[],harvests:[],eggs:[],chores:[],choreLog:[],hay:[],goals:{target:0,growth:15,notes:""}};
 var county={fips:"48439",name:"Tarrant"};
 var curTab="dashboard",curHF="All",curHSF="All",curCF="All",curConF="All",finTL="month";
 var fabFn=null,curHQ="",toastT=null,confirmFn=null;
@@ -482,7 +516,7 @@ function loadData(){
   try{r=localStorage.getItem("tr7");if(r){od=JSON.parse(r);keys=["animals","costs","weights","vax","breeding","feed","equipment","pastures","rainfall","reminders","loans","contacts","losses","photos","docs"];for(i=0;i<keys.length;i++){if(od[keys[i]]&&od[keys[i]].length)D[keys[i]]=od[keys[i]];}saveData();}}catch(e){}
 }
 function ensureArrays(){
-  var keys=["animals","costs","weights","vax","breeding","feed","equipment","pastures","rainfall","reminders","loans","contacts","losses","photos","docs","hives","harvests","eggs"];
+  var keys=["animals","costs","weights","vax","breeding","feed","equipment","pastures","rainfall","reminders","loans","contacts","losses","photos","docs","hives","harvests","eggs","chores","choreLog","hay"];
   for(var i=0;i<keys.length;i++){if(!D[keys[i]])D[keys[i]]=[];}
   if(!D.goals)D.goals={target:0,growth:15,notes:""};
 }
@@ -621,7 +655,8 @@ var TABS=[
   {id:"losses",icon:"📋",label:"Losses"},
   {id:"weather",icon:"🌦",label:"Weather"},
   {id:"goals",icon:"🎯",label:"Goals"},
-  {id:"alerts",icon:"🔔",label:"Alerts"}
+  {id:"alerts",icon:"🔔",label:"Alerts"},
+  {id:"chores",icon:"✅",label:"Chores"}
 ];
 
 function buildUI(){
@@ -645,7 +680,7 @@ function goTab(id){
 }
 
 function renderTab(id){
-  var fns={dashboard:rDash,herd:rHerd,health:rHealth,inventory:rInv,eggs:rEggs,apiary:rApiary,pastures:rPastures,costs:rCosts,finance:rFinance,equipment:rEquip,market:rMarket,contacts:rContacts,losses:rLosses,weather:rWeather,goals:rGoals,alerts:rAlerts};
+  var fns={dashboard:rDash,herd:rHerd,health:rHealth,inventory:rInv,eggs:rEggs,apiary:rApiary,pastures:rPastures,costs:rCosts,finance:rFinance,equipment:rEquip,market:rMarket,contacts:rContacts,losses:rLosses,weather:rWeather,goals:rGoals,alerts:rAlerts,chores:rChores};
   if(fns[id]){try{fns[id]();}catch(e){var pg=el("pg-"+id);if(pg)pg.innerHTML='<div class="card" style="color:#E88A6A">Error: '+esc(e.message)+'</div>';}}
 }
 
@@ -990,7 +1025,20 @@ function rDash(){
   html+='<div class="card"><div class="ch"><div class="ct">Herd Summary</div><button class="btn bo bxs" onclick="openAnimalExport()">Export</button></div>';
   if(!g2Keys.length){html+='<div style="font-size:12px;color:#607898">No animals yet. Go to Herd to add.</div>';}
   else{for(i=0;i<g2Keys.length;i++){var gk=g2Keys[i];html+='<div style="display:flex;align-items:center;gap:8px;padding:6px 0;border-bottom:1px solid rgba(201,149,106,.08)"><span style="font-size:18px">'+(gk==="Hives"?"🐝":(EMJ[gk]||""))+'</span><span style="flex:1;font-size:13px">'+gk+'</span><span style="font-size:14px;color:#E8C87A;font-weight:700">'+g2[gk]+'</span></div>';}}
-  html+='</div><div class="card"><div class="ct" style="margin-bottom:8px">Recent Transactions</div>';
+  html+='</div>';
+  // Chore progress widget
+  if(D.chores.length){
+    var totalDc=0,doneDc=0;for(i=0;i<D.chores.length;i++){if(D.chores[i].freq==="daily"){totalDc++;if(isChoreCompleted(D.chores[i].id))doneDc++;}}
+    var pctD=totalDc>0?Math.round(doneDc/totalDc*100):0;
+    html+='<div class="card" onclick="goTab(\'chores\')" style="cursor:pointer"><div class="ch"><div class="ct">✅ Today\'s Chores</div><span class="b '+(pctD===100?"bg":pctD>=50?"by":"br")+'">'+doneDc+"/"+totalDc+'</span></div>';
+    html+='<div class="pb" style="height:8px"><div class="pf" style="width:'+pctD+'%;background:'+(pctD===100?"#4A7C59":pctD>=50?"#D4A032":"#B84C2B")+'"></div></div>';
+    if(pctD===100&&totalDc>0)html+='<div style="font-size:11px;color:#7EC89A;margin-top:5px">All done!</div>';
+    else if(totalDc>0)html+='<div style="font-size:10px;color:#607898;margin-top:4px">'+(totalDc-doneDc)+' chore'+(totalDc-doneDc!==1?"s":"")+" remaining — tap to view"+'</div>';
+    html+='</div>';
+  }
+  // Hay status widget
+  if(D.hay.length){var dL=hayDaysLeft();if(dL!==null&&dL<45)html+='<div class="ast '+(dL<15?"":dL<30?"warn":"ok")+'">🌾 Hay: <strong>'+dL+" days</strong> remaining"+(dL<30?" — consider reordering":"")+'</div>';}
+  html+='<div class="card"><div class="ct" style="margin-bottom:8px">Recent Transactions</div>';
   if(!recent.length)html+='<div style="font-size:12px;color:#607898">No transactions yet.</div>';
   else{for(i=0;i<recent.length;i++){c=recent[i];html+='<div class="ci" onclick="openCost(\''+c.id+'\')"><div><div class="cd">'+esc(c.desc)+'</div><div class="cc">'+(c.schedF||"")+" - "+(c.date||"")+'</div></div><div class="ca '+(c.type==="income"?"inc":"")+'">'+( c.type==="income"?"+":"-")+money(c.amount)+'</div></div>';}}
   html+='</div><div class="card"><div class="ch"><div class="ct">Rainfall (30 days)</div><button class="btn bo bxs" onclick="sv(\'rn-date\',today());sv(\'rn-in\',\'\');sv(\'rn-notes\',\'\');openM(\'m-rain\')">+ Log</button></div>';
@@ -1061,7 +1109,8 @@ function rInv(){
   var pg=el("pg-inventory");if(!pg)return;setFAB(function(){openFeed();});
   var i,f,daily=0;for(i=0;i<D.feed.length;i++){f=D.feed[i];daily+=(f.daily||0)*(f.cost||0);}
   var perHead=calcCPH(),phKeys=Object.keys(perHead);
-  var html='<div class="sg"><div class="sb"><div class="sv">'+moneyS(daily)+'</div><div class="slb">Daily Feed Cost</div></div><div class="sb"><div class="sv">'+(actA().length?moneyS(daily/actA().length):"0")+'</div><div class="slb">Blended/Head</div></div></div>';
+  var html=hayCard();
+  html+='<div class="sg"><div class="sb"><div class="sv">'+moneyS(daily)+'</div><div class="slb">Daily Feed Cost</div></div><div class="sb"><div class="sv">'+(actA().length?moneyS(daily/actA().length):"0")+'</div><div class="slb">Blended/Head</div></div></div>';
   if(phKeys.length){html+='<div class="card"><div class="ct" style="margin-bottom:8px">Cost Per Head by Species</div>';for(i=0;i<phKeys.length;i++)html+='<div class="mrow"><div style="font-size:12px">'+phKeys[i]+'</div><div style="font-size:12px;font-weight:700;color:#E8C87A">$'+perHead[phKeys[i]]+'/day</div></div>';html+='</div>';}
   var cats=["Feed","Supplies","Medicine","Other"];
   for(var ci=0;ci<cats.length;ci++){
@@ -1357,6 +1406,145 @@ function rAlerts(){
   if(future.length){html+='<div class="card"><div class="ct" style="margin-bottom:8px">Upcoming</div>';for(i=0;i<Math.min(future.length,8);i++){r=future[i];html+='<div class="nr"><div><div style="font-size:13px;font-weight:700">'+esc(r.label)+'</div><div style="font-size:10px;color:#9ABCDA">'+r.date+'</div></div><span class="b bb">'+du(r.date)+'d</span></div>';}html+='</div>';}
   html+='<div class="card"><div class="ct" style="margin-bottom:8px">Push Notifications</div><p style="font-size:12px;color:#9ABCDA;margin-bottom:10px">Works best when added to Home Screen on Android.</p><button class="btn bp" onclick="if(\'Notification\'in window)Notification.requestPermission().then(function(p){alert(p===\'granted\'?\'Notifications enabled!\':\'Enable in browser settings.\');});else alert(\'Not supported.\')">Enable Notifications</button></div>';
   pg.innerHTML=html;
+}
+
+// ── CHORES ──
+function chorePeriod(freq){
+  var now=new Date();
+  if(freq==="daily")return now.toISOString().slice(0,10);
+  if(freq==="weekly"){
+    var mon=new Date(now),day=mon.getDay(),diff=mon.getDate()-day+(day===0?-6:1);
+    mon.setDate(diff);
+    return mon.getFullYear()+"-"+("0"+(mon.getMonth()+1)).slice(-2)+"-"+("0"+mon.getDate()).slice(-2)+"w";
+  }
+  return now.getFullYear()+"-"+("0"+(now.getMonth()+1)).slice(-2);
+}
+function isChoreCompleted(choreId){
+  var c=null,i;for(i=0;i<D.chores.length;i++){if(D.chores[i].id===choreId){c=D.chores[i];break;}}
+  if(!c)return false;
+  var period=chorePeriod(c.freq);
+  for(i=0;i<D.choreLog.length;i++){if(D.choreLog[i].choreId===choreId&&D.choreLog[i].period===period)return true;}
+  return false;
+}
+function toggleChore(choreId){
+  hap();
+  var c=null,i;for(i=0;i<D.chores.length;i++){if(D.chores[i].id===choreId){c=D.chores[i];break;}}
+  if(!c)return;
+  var period=chorePeriod(c.freq),found=-1;
+  for(i=0;i<D.choreLog.length;i++){if(D.choreLog[i].choreId===choreId&&D.choreLog[i].period===period){found=i;break;}}
+  if(found>=0){D.choreLog.splice(found,1);}else{D.choreLog.push({id:uid(),choreId:choreId,period:period});}
+  saveData();renderTab(curTab);
+}
+function openChore(id){
+  id=id||null;sv("ch-id",id||"");
+  el("mch-ttl").textContent=id?"Edit Chore":"Add Chore";
+  el("ch-del-wrap").style.display=id?"block":"none";
+  if(id){var c=null,i;for(i=0;i<D.chores.length;i++){if(D.chores[i].id===id){c=D.chores[i];break;}}if(c){sv("ch-label",c.label);sv("ch-freq",c.freq||"daily");sv("ch-cat",c.cat||"animals");}}
+  else{sv("ch-label","");sv("ch-freq","daily");sv("ch-cat","animals");}
+  openM("m-chore");
+}
+function saveChore(){
+  var id=gv("ch-id"),label=gv("ch-label").trim();
+  if(!label){toast("Enter a chore name.",true);return;}
+  dbSet("chores",{id:id||uid(),label:label,freq:gv("ch-freq")||"daily",cat:gv("ch-cat")||"animals"});
+  closeM("m-chore");toast("Chore saved.");
+}
+function delChore(){
+  var id=gv("ch-id");if(!id)return;
+  showConfirm("Remove this chore and all completion history?",function(){
+    for(var i=D.choreLog.length-1;i>=0;i--){if(D.choreLog[i].choreId===id)D.choreLog.splice(i,1);}
+    dbDel("chores",id);closeM("m-chore");toast("Removed.");
+  });
+}
+function rChores(){
+  var pg=el("pg-chores");if(!pg)return;
+  setFAB(function(){openChore();});
+  var freqs=["daily","weekly","monthly"],fLabels={daily:"Daily",weekly:"Weekly",monthly:"Monthly"};
+  var catIcons={animals:"🐄",equipment:"🚜",property:"🏡",other:"📝"};
+  var i,totalD=0,doneD=0;
+  for(i=0;i<D.chores.length;i++){if(D.chores[i].freq==="daily"){totalD++;if(isChoreCompleted(D.chores[i].id))doneD++;}}
+  var pct=totalD>0?Math.round(doneD/totalD*100):0;
+  var html="";
+  if(D.chores.length){
+    html+='<div class="card"><div class="ch"><div class="ct">Today\'s Progress</div><span class="b '+(pct===100?"bg":pct>=50?"by":"br")+'">'+doneD+"/"+totalD+' daily</span></div>';
+    html+='<div class="pb" style="height:10px;margin-bottom:5px"><div class="pf" style="width:'+pct+'%;background:'+(pct===100?"#4A7C59":pct>=50?"#D4A032":"#B84C2B")+'"></div></div>';
+    if(pct===100&&totalD>0)html+='<div style="font-size:11px;color:#7EC89A;text-align:center;padding-bottom:3px">All daily chores done!</div>';
+    html+='</div>';
+  }
+  for(var fi=0;fi<freqs.length;fi++){
+    var freq=freqs[fi],items=[],j;
+    for(i=0;i<D.chores.length;i++){if(D.chores[i].freq===freq)items.push(D.chores[i]);}
+    if(!items.length)continue;
+    items.sort(function(a,b){return(isChoreCompleted(a.id)?1:0)-(isChoreCompleted(b.id)?1:0);});
+    var doneF=0;for(i=0;i<items.length;i++){if(isChoreCompleted(items[i].id))doneF++;}
+    html+='<div class="card"><div class="ch"><div class="ct">'+fLabels[freq]+'</div><span class="b '+(doneF===items.length?"bg":"bb")+'">'+doneF+"/"+items.length+'</span></div>';
+    for(i=0;i<items.length;i++){
+      var ch=items[i],done2=isChoreCompleted(ch.id),icon=catIcons[ch.cat]||"📝";
+      html+='<div class="chore-row" onclick="toggleChore(\''+ch.id+'\')">';
+      html+='<div class="chore-ck'+(done2?" done":"")+'"></div>';
+      html+='<span style="font-size:16px">'+icon+'</span>';
+      html+='<span class="chore-lbl'+(done2?" done":"")+'">'+esc(ch.label)+'</span>';
+      html+='<button class="btn bo bxs" style="padding:5px 9px;-webkit-flex-shrink:0;flex-shrink:0" onclick="event.stopPropagation();openChore(\''+ch.id+'\')">&#9998;</button>';
+      html+='</div>';
+    }
+    html+='</div>';
+  }
+  if(!D.chores.length)html+='<div class="empty"><div class="ei">✅</div><div class="et">No chores yet. Tap + to add daily tasks.</div></div>';
+  pg.innerHTML=html;
+}
+
+// ── HAY / FORAGE ──
+function autoHayLbs(){
+  var form=gv("hy-form"),defaults={"Small Square":50,"Large Square":800,"Round Bale":1200};
+  if(defaults[form])sv("hy-lbs",defaults[form]);
+}
+function openHay(id){
+  id=id||null;sv("hy-id",id||"");
+  el("mhy-ttl").textContent=id?"Edit Hay":"Add Hay / Forage";
+  el("hy-del-wrap").style.display=id?"block":"none";
+  if(id){var h=null,i;for(i=0;i<D.hay.length;i++){if(D.hay[i].id===id){h=D.hay[i];break;}}if(h){sv("hy-type",h.type);sv("hy-form",h.form);sv("hy-count",h.count);sv("hy-lbs",h.lbsPerUnit);sv("hy-cost",h.costPerUnit||0);sv("hy-notes",h.notes||"");}}
+  else{sv("hy-type","Coastal");sv("hy-form","Round Bale");sv("hy-lbs",1200);sv("hy-count","");sv("hy-cost","");sv("hy-notes","");}
+  openM("m-hay");
+}
+function saveHay(){
+  var id=gv("hy-id"),count=parseFloat(gv("hy-count"))||0,lbs=parseFloat(gv("hy-lbs"))||0;
+  if(!count){toast("Enter bale count.",true);return;}
+  if(!lbs){toast("Enter lbs per bale.",true);return;}
+  dbSet("hay",{id:id||uid(),type:gv("hy-type")||"Coastal",form:gv("hy-form")||"Round Bale",count:count,lbsPerUnit:lbs,costPerUnit:parseFloat(gv("hy-cost"))||0,notes:gv("hy-notes"),ts:Date.now()});
+  closeM("m-hay");toast("Hay saved.");
+}
+function delHay(){
+  var id=gv("hy-id");if(!id)return;
+  showConfirm("Remove this hay entry?",function(){dbDel("hay",id);closeM("m-hay");toast("Removed.");});
+}
+function hayDaysLeft(){
+  var i,totalLbs=0;for(i=0;i<D.hay.length;i++)totalLbs+=D.hay[i].count*D.hay[i].lbsPerUnit;
+  if(!totalLbs)return null;
+  var act=actA(),totalWt=0;
+  for(i=0;i<act.length;i++)totalWt+=(parseFloat(act[i].weight)||1000);
+  if(!totalWt&&act.length)totalWt=act.length*1000;
+  if(!totalWt)return null;
+  return Math.round(totalLbs/(totalWt*0.025));
+}
+function hayCard(){
+  var i,h,totalBales=0,totalLbs=0,totalCost=0;
+  for(i=0;i<D.hay.length;i++){h=D.hay[i];totalBales+=h.count;totalLbs+=h.count*h.lbsPerUnit;totalCost+=h.count*(h.costPerUnit||0);}
+  var daysLeft=hayDaysLeft(),act=actA();
+  var dCls=daysLeft===null?"bb":daysLeft<15?"br":daysLeft<30?"by":"bg";
+  var html='<div class="card"><div class="ch"><div class="ct">🌾 Hay &amp; Forage</div><button class="btn bo bxs" onclick="openHay()">+ Add</button></div>';
+  if(!D.hay.length){html+='<div style="font-size:12px;color:#607898">No hay logged. Tap + to track your forage inventory.</div></div>';return html;}
+  var totalT=(totalLbs/2000);
+  html+='<div class="sg3"><div class="sb"><div class="sv">'+totalBales+'</div><div class="slb">Bales</div></div>';
+  html+='<div class="sb"><div class="sv">'+(totalT>=1?totalT.toFixed(1)+"T":Math.round(totalLbs)+"lbs")+'</div><div class="slb">Total Weight</div></div>';
+  html+='<div class="sb"><div class="sv '+dCls+'">'+(daysLeft===null?"?":daysLeft+"d")+'</div><div class="slb">Est. Days</div></div></div>';
+  if(act.length&&daysLeft!==null){var dailyCon=Math.round((function(){var t=0,j;for(j=0;j<act.length;j++)t+=(parseFloat(act[j].weight)||1000);if(!t)t=act.length*1000;return t*0.025;})());html+='<div style="font-size:10px;color:#607898;margin:-4px 0 8px">Est. '+dailyCon+' lbs/day for '+act.length+' animals at 2.5% body weight</div>';}
+  if(daysLeft!==null&&daysLeft<30)html+='<div class="ast '+(daysLeft<15?"":"warn")+'">'+(daysLeft<15?"⚠️ Low hay — ":"")+(daysLeft)+'d remaining. Reorder to maintain supply.</div>';
+  if(totalCost>0)html+='<div style="font-size:11px;color:#9ABCDA;margin-bottom:8px">Inventory value: <strong style="color:#E8C87A">'+money(totalCost)+'</strong></div>';
+  for(i=0;i<D.hay.length;i++){h=D.hay[i];var val=h.count*(h.costPerUnit||0);
+    html+='<div class="li" onclick="openHay(\''+h.id+'\')"><div class="le">🌾</div><div class="lm"><div class="ln">'+esc(h.type)+' — '+esc(h.form)+'</div><div class="ls">'+h.count+' bales @ '+h.lbsPerUnit+' lbs'+(h.costPerUnit?' · '+money(h.costPerUnit)+'/bale':'')+'</div>'+(h.notes?'<div class="en">'+esc(h.notes)+'</div>':'')+'</div><div class="lr"><div style="font-size:12px;color:#E8C87A;font-weight:700">'+(val?money(val):"-")+'</div></div></div>';
+  }
+  html+='</div>';
+  return html;
 }
 
 // ── BOOT ──
